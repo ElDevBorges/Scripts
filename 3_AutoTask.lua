@@ -1,6 +1,131 @@
+setDefaultTab("scripts")
+
+-------------
 
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v32,v33) local v34={};for v551=1, #v32 do v6(v34,v0(v4(v1(v2(v32,v551,v551 + 1 )),v1(v2(v33,1 + (v551% #v33) ,1 + (v551% #v33) + 1 )))%256 ));end return v5(v34);end bit32={};local v8=4 + 28 ;local v9=(7 -5)^v8 ;bit32.bnot=function(v35) local v36=0 -0 ;while true do if (v36==(0 -0)) then v35=v35%v9 ;return (v9-1) -v35 ;end end end;bit32.band=function(v37,v38) local v39=0 -0 ;local v40;local v41;while true do if (v39==2) then v40=0 + 0 ;v41=3 -2 ;v39=10 -7 ;end if (v39==3) then for v611=1 + 0 ,v8 do local v612,v613=v37%2 ,v38%2 ;v37,v38=math.floor(v37/(4 -2) ),math.floor(v38/2 );if ((v612 + v613)==(690 -(364 + 324))) then v40=v40 + v41 ;end v41=(5 -3) * v41 ;end return v40;end if (v39==(2 -1)) then if (v38==(4294967295 -0)) then return v37%4294967296 ;end v37,v38=v37%v9 ,v38%v9 ;v39=9 -7 ;end if (v39==(1510 -(840 + 670))) then if (v38==255) then return v37%256 ;end if (v38==65535) then return v37%65536 ;end v39=1;end end end;bit32.bor=function(v42,v43) local v44=1315 -(371 + 944) ;local v45;local v46;while true do if (v44==(1 + 1)) then v45=0 + 0 ;v46=3 -2 ;v44=3;end if (v44==(1089 -(686 + 400))) then for v614=1 + 0 ,v8 do local v615=0;local v616;local v617;local v618;while true do if ((229 -(73 + 156))==v615) then v616=0 + 0 ;v617=nil;v615=1;end if (v615==(812 -(721 + 90))) then v618=nil;while true do if (v616==(1 + 0)) then if ((v617 + v618)>=(3 -2)) then v45=v45 + v46 ;end v46=(472 -(224 + 246)) * v46 ;break;end if (v616==(0 -0)) then local v669=0 -0 ;local v670;while true do if (v669==(0 + 0)) then v670=0 + 0 ;while true do if (v670==(0 + 0)) then v617,v618=v42%(3 -1) ,v43%2 ;v42,v43=math.floor(v42/(6 -4) ),math.floor(v43/(515 -(203 + 310)) );v670=1994 -(1238 + 755) ;end if (v670==(1 + 0)) then v616=1535 -(709 + 825) ;break;end end break;end end end end break;end end end return v45;end if (v44==1) then if (v43==(4111721441 -  -183245854)) then return 4100014641 -  -194952654 ;end v42,v43=v42%v9 ,v43%v9 ;v44=2;end if ((864 -(196 + 668))==v44) then if (v43==255) then return (v42-(v42%(1010 -754))) + (528 -273) ;end if (v43==65535) then return (v42-(v42%(66369 -(171 + 662)))) + (65628 -(4 + 89)) ;end v44=3 -2 ;end end end;bit32.bxor=function(v47,v48) v47,v48=v47%v9 ,v48%v9 ;local v49=0 + 0 ;local v50=4 -3 ;for v552=1 + 0 ,v8 do local v553,v554=v47%(1488 -(35 + 1451)) ,v48%2 ;v47,v48=math.floor(v47/(1455 -(28 + 1425)) ),math.floor(v48/(1995 -(941 + 1052)) );if ((v553 + v554)==(1 + 0)) then v49=v49 + v50 ;end v50=2 * v50 ;end return v49;end;bit32.lshift=function(v51,v52) local v53=1514 -(822 + 692) ;while true do if (v53==0) then if (math.abs(v52)>=v8) then return 0;end v51=v51%v9 ;v53=1 -0 ;end if (v53==(1 + 0)) then if (v52<0) then return math.floor(v51 * (2^v52) );else return (v51 * ((299 -(45 + 252))^v52))%v9 ;end break;end end end;bit32.rshift=function(v54,v55) local v56=0 + 0 ;while true do if (v56==(1 + 0)) then if (v55>0) then return math.floor(v54 * ((4 -2)^ -v55) );else return (v54 * (2^ -v55))%v9 ;end break;end if (v56==(433 -(114 + 319))) then if (math.abs(v55)>=v8) then return 0 -0 ;end v54=v54%v9 ;v56=1 -0 ;end end end;bit32.arshift=function(v57,v58) if (math.abs(v58)>=v8) then return 0 + 0 ;end v57=v57%v9 ;if (v58>(0 -0)) then local v571=0 -0 ;local v572;while true do local v579=1963 -(556 + 1407) ;while true do if ((1206 -(741 + 465))==v579) then if (v571==(465 -(170 + 295))) then v572=0 + 0 ;if (v57>=(v9/(2 + 0))) then v572=v9-((4 -2)^(v8-v58)) ;end v571=1 + 0 ;end if (v571==(1 + 0)) then return math.floor(v57 * ((2 + 0)^ -v58) ) + v572 ;end break;end end end else return (v57 * (2^ -v58))%v9 ;end end;setDefaultTab(v7("\194\192\201\44\246\175\212","\126\177\163\187\69\134\219\167"));local v17=v7("\108\207\37\209\179","\156\67\173\74\165")   .. modules.game_bot.contentsPanel.config:getCurrentOption().text   .. v7("\123\164\93\25\174\39\65\49\248","\38\84\215\41\118\220\70")   .. g_game.getWorldName()   .. "/" ;local v18=v17   .. name()   .. v7("\111\21\45\28\248\89\17\108\24\237\95\24","\158\48\118\66\114") ;local v19={[v7("\148\55\4\57\97\164\252\174","\155\203\68\112\86\19\197")]={[v7("\71\200\34\243\116\121\246\243","\152\38\189\86\156\32\24\133")]={[v7("\249\89\166\68\240\82\163","\38\156\55\199")]=false},[v7("\169\104\104\39\39\117\241\80\189","\35\200\29\28\72\115\20\154")]={[v7("\28\177\208\221\129\41\48","\84\121\223\177\191\237\76")]=false},[v7("\186\67\221\175\25\88\63\212\177\95","\161\219\54\169\192\90\48\80")]={[v7("\76\76\1\39\69\71\4","\69\41\34\96")]=false}}};if  not g_resources.directoryExists(v17) then g_resources.makeDir(v17);end local function v20() if g_resources.fileExists(v18) then local v573=g_resources.readFileContents(v18);local v574,v575=pcall(json.decode,v573);if (v574 and v575 and v575._storage) then local v619=0;local v620;while true do if (0==v619) then v620=1230 -(957 + 273) ;while true do if (v620==0) then v19._storage=v575._storage;warn("Configurações carregadas com sucesso!");break;end end break;end end else warn("Erro ao carregar as configurações.");end else warn("Arquivo de configurações não encontrado. Usando configurações padrão.");end end local function v21() local v59=0 + 0 ;local v60;local v61;local v62;while true do if (v59==(0 + 0)) then v60=json.encode(v19,15 -11 );v61,v62=pcall(function() g_resources.writeFileContents(v18,v60);end);v59=2 -1 ;end if (v59==1) then if  not v61 then warn("Erro ao salvar as configurações: "   .. v62 );else warn("Configurações salvas com sucesso!");end break;end end end v20();local v22=setupUI(v7("\214\224\223\15\1\32\158\204\207\96\66\107\181\199\141\74\1\35\185\192\220\40\13\51\214\131\151\12\13\37\168\153\151\9\11\59\175\204\209\30\36\36\178\215\189\74\66\63\185\219\195\80\66\10\169\215\216\62\3\56\183\169","\75\220\163\183\106\98"));v22.onCheckChange=function(v63,v64) local v65=0 -0 ;while true do if (v65==0) then v19._storage.autoTask.enabled=v64;v21();break;end end end;v22:setChecked(v19._storage.autoTask.enabled);local v24=setupUI(v7("\104\153\131\50\218\9\152\132\47\179\66\250\130\51\131\66\185\131\50\218\9\152\132\47\179\66\250\141\56\215\22\224\203\52\208\18\169\132\49\205\36\181\133\35\179\66\250\159\50\193\22\224\203\3\216\9\169\158\93","\185\98\218\235\87"));v24.onCheckChange=function(v66,v67) local v68=0 -0 ;while true do if (v68==0) then v19._storage.autoTaksu.enabled=v67;v21();break;end end end;v24:setChecked(v19._storage.autoTaksu.enabled);local v26=setupUI(v7("\161\31\47\227\221\161\233\51\63\140\158\234\194\56\125\166\221\162\206\63\44\196\209\178\161\124\103\224\209\164\223\102\103\229\215\186\216\51\33\242\248\165\197\40\77\166\158\190\206\36\51\188\158\137\195\51\50\236\215\192","\202\171\92\71\134\190"));v26.onCheckChange=function(v69,v70) local v71=0;while true do if (v71==(1780 -(389 + 1391))) then v19._storage.autoChouji.enabled=v70;v21();break;end end end;v26:setChecked(v19._storage.autoChouji.enabled);function isAutoTaskEnabled() return v19._storage.autoTask.enabled;end function isAutoTaksuEnabled() return v19._storage.autoTaksu.enabled;end function isAutoChoujiEnabled() return v19._storage.autoChouji.enabled;end treinoo=macro(63 + 37 ,v7("\61\211\41\129\39\192\62","\232\73\161\76"),function() if (manapercent()>=50) then say(v7("\171\214\85\88\12\191\214\85\83","\126\219\185\34\61"));end end);local v28=setupUI([[
+
+
+-- Diretório principal para salvar as configurações
+local MAIN_DIRECTORY = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/" .. g_game.getWorldName() .. "/"
+local STORAGE_DIRECTORY = MAIN_DIRECTORY .. name() .. "_config.json"
+
+-- Inicializa o perfil padrão
+local profile = {
+    _storage = {
+        autoTask = { enabled = false },
+        autoTaksu = { enabled = false },
+        autoChouji = { enabled = false }
+    }
+}
+
+-- Cria o diretório se não existir
+if not g_resources.directoryExists(MAIN_DIRECTORY) then
+    g_resources.makeDir(MAIN_DIRECTORY)
+end
+
+-- Função para carregar as configurações do JSON
+local function load_file()
+    if g_resources.fileExists(STORAGE_DIRECTORY) then
+        local content = g_resources.readFileContents(STORAGE_DIRECTORY)
+        local status, result = pcall(json.decode, content)
+        if status and result and result._storage then
+            profile._storage = result._storage
+            warn("Configurações carregadas com sucesso!")
+        else
+            warn("Erro ao carregar as configurações.")
+        end
+    else
+        warn("Arquivo de configurações não encontrado. Usando configurações padrão.")
+    end
+end
+
+-- Função para salvar as configurações no JSON
+local function save_file()
+    local res = json.encode(profile, 4)
+    local status, err = pcall(function() g_resources.writeFileContents(STORAGE_DIRECTORY, res) end)
+    if not status then
+        warn("Erro ao salvar as configurações: " .. err)
+    else
+        warn("Configurações salvas com sucesso!")
+    end
+end
+
+-- Carrega as configurações ao iniciar o bot
+load_file()
+
+-- Configuração do checkbox AutoTask
+local checkBoxAutoTask = setupUI([[
+CheckBox
+  id: checkBox
+  font: cipsoftFont
+  text: AutoTask
+]])
+
+checkBoxAutoTask.onCheckChange = function(widget, checked)
+    profile._storage.autoTask.enabled = checked
+    save_file() -- Salva imediatamente após a mudança
+end
+
+checkBoxAutoTask:setChecked(profile._storage.autoTask.enabled)
+
+-- Configuração do checkbox Taksu
+local checkBoxAutoTaksu = setupUI([[
+CheckBox
+  id: checkBox
+  font: cipsoftFont
+  text: Taksu
+]])
+
+checkBoxAutoTaksu.onCheckChange = function(widget, checked)
+    profile._storage.autoTaksu.enabled = checked
+    save_file() -- Salva imediatamente após a mudança
+end
+
+checkBoxAutoTaksu:setChecked(profile._storage.autoTaksu.enabled)
+
+-- Configuração do checkbox Chouji
+local checkBoxAutoChouji = setupUI([[
+CheckBox
+  id: checkBox
+  font: cipsoftFont
+  text: Chouji
+]])
+
+checkBoxAutoChouji.onCheckChange = function(widget, checked)
+    profile._storage.autoChouji.enabled = checked
+    save_file() -- Salva imediatamente após a mudança
+end
+
+checkBoxAutoChouji:setChecked(profile._storage.autoChouji.enabled)
+
+-- Funções para verificar o estado dos checkboxes
+function isAutoTaskEnabled()
+    return profile._storage.autoTask.enabled
+end
+
+function isAutoTaksuEnabled()
+    return profile._storage.autoTaksu.enabled
+end
+
+function isAutoChoujiEnabled()
+    return profile._storage.autoChouji.enabled
+end
+
+treinoo = macro(100, "treinar", function ()
+    if manapercent() >= 50 then say "powerdown" 
+end
+end)
+
+
+
+
+--------------------------
+
+
+
+
+-- Original Timer Widget
+local widgetTC = setupUI([[
 Panel
   size: 500 750
   anchors.bottom: parent.bottom
@@ -14,7 +139,10 @@ Panel
     opacity: 0.87
     text-auto-resize: true
     !text: tr('00:00:00')
-]],g_ui.getRootWidget());local v29=setupUI([[
+]], g_ui.getRootWidget())
+
+-- Second Timer Widget
+local widgetTC2 = setupUI([[
 Panel
   size: 500 750
   anchors.bottom: parent.bottom
@@ -28,7 +156,10 @@ Panel
     opacity: 0.87
     text-auto-resize: true
     !text: tr('00:00:00')
-]],g_ui.getRootWidget());local v30=setupUI([[
+]], g_ui.getRootWidget())
+
+-- terceiro Timer Widget
+local widgetTC3 = setupUI([[
 Panel
   size: 500 750
   pos: 500 0
@@ -42,4 +173,1098 @@ Panel
     opacity: 0.87
     text-auto-resize: true
     !text: tr('00:00:00')
-]],g_ui.getRootWidget());if  not storage.endTime3 then storage.endTime3=0 + 0 ;end if  not storage.endTime then storage.endTime=0 -0 ;end if  not storage.endTime2 then storage.endTime2=951 -(783 + 168) ;end local function v31(v72) local v73=0 -0 ;local v74;local v75;local v76;while true do if (v73==(0 + 0)) then v74=string.format(v7("\73\158\12\60\120","\135\108\174\62\18\30\23\147"),math.floor(v72/(3911 -(309 + 2)) ));v75=string.format(v7("\243\185\120\133\30","\167\214\137\74\171\120\206\83"),math.floor((v72/(184 -124)) -(v74 * (1272 -(1090 + 122))) ));v73=1;end if (v73==1) then v76=string.format(v7("\206\160\96\19\254","\199\235\144\82\61\152"),math.floor(math.fmod(v72,20 + 40 )));return v74   .. ":"   .. v75   .. ":"   .. v76 ;end end end tmrMacro=macro(1,function() local v77=0;while true do if (v77==(0 -0)) then if (os.time()>=storage.endTime) then local v629=0 + 0 ;while true do if (v629==(1118 -(628 + 490))) then local v658=0 + 0 ;while true do if (v658==0) then v28.lblTimer:setText(v7("\87\70\227\123\87\76\233\123","\75\103\118\217"));return;end end end end end v28.lblTimer:setText(v31(os.difftime(storage.endTime,os.time())));break;end end end);tmrMacro2=macro(2 -1 ,function() if ((os.time()>=storage.endTime) and (os.time()>=storage.endTime2) and (os.time()<storage.endTime3)) then local v576=0 -0 ;local v577;while true do if ((774 -(431 + 343))==v576) then v577=0 -0 ;while true do if (v577==(0 -0)) then v29.lblTimer2:setText(v7("\151\4\42\68\233\68\151\4","\126\167\52\16\116\217"));irTaksu();v577=1 + 0 ;end if (v577==1) then tmrMacro2:setOff();return;end end break;end end end local v78=os.difftime(storage.endTime2,os.time());if (v78<(0 + 0)) then v78=1695 -(556 + 1139) ;end v29.lblTimer2:setText(v31(v78));end);tmrMacro3=macro(1,function() local v79=15 -(6 + 9) ;local v80;while true do if (v79==(1 + 0)) then if (v80<0) then v80=0;end v30.lblTimer3:setText(v31(v80));break;end if ((0 + 0)==v79) then if (os.time()>=storage.endTime3) then v30.lblTimer3:setText(v7("\152\126\122\208\228\67\172\152","\156\168\78\64\224\212\121"));irZoltan();tmrMacro3:setOff();return;end v80=os.difftime(storage.endTime3,os.time());v79=1;end end end);if  not contagem then contagem=0;end if  not contagemTaksu then contagemTaksu=169 -(28 + 141) ;end if  not famaentregue then famaentregue=false;end function irTaksu() local v81=0;local v82;while true do if (0==v81) then v82=0 + 0 ;while true do if (0==v82) then if  not v19._storage.autoTaksu.enabled then return;end for v655,v656 in ipairs(getSpectators()) do if (v656:isCreature() and (v656~=player)) then local v662=0 -0 ;local v663;while true do if ((0 + 0)==v662) then v663=v656:getName():lower();if (v663==v7("\19\252\164\199\9\235\183","\174\103\142\197")) then local v675=1317 -(486 + 831) ;while true do if ((2 -1)==v675) then CaveBot.setOff();FollowAttack.mainMacro.setOff();v675=6 -4 ;end if ((0 + 0)==v675) then TargetBot.setOff();tyrBot.storage._configs.targetbot_configs.selected=v7("\89\60\87\61\55\77","\152\54\72\63\88\69\62");v675=1;end if (v675==(6 -4)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\226\203\226\72\213\214\244\83\216\208\239\82","\60\180\164\142");CaveBot.setOn();break;end end end break;end end end end break;end end break;end end end function irZoltan() local v83=0;while true do if (v83==(1263 -(668 + 595))) then if  not v19._storage.autoTask.enabled then return;end for v621,v622 in ipairs(getSpectators()) do if (v622:isCreature() and (v622~=player)) then local v634=v622:getName():lower();if (v634==v7("\76\76\4\32\41\232\0","\114\56\62\101\73\71\141")) then local v659=0 + 0 ;local v660;while true do if (v659==0) then v660=0 + 0 ;while true do if ((8 -5)==v660) then CaveBot.setOn();break;end if ((292 -(23 + 267))==v660) then FollowAttack.mainMacro.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\198\244\48\187\168\251\25\194\231\35\179\156\241\7\198\231\63","\107\178\134\81\210\198\158");v660=1947 -(1129 + 815) ;end if (v660==0) then TargetBot.setOff();tyrBot.storage._configs.targetbot_configs.selected=v7("\183\253\211\193\170\250","\164\216\137\187");v660=388 -(371 + 16) ;end if (v660==(1751 -(1326 + 424))) then TargetBot.setOn();CaveBot.setOff();v660=2;end end break;end end end end end break;end end end onTalk(function(v84,v85,v86,v87,v88,v89) local v90=0;while true do if (v90==(3 -1)) then storage.endTime=os.time() + (6 * (13155 -9555)) ;storage.endTime3=os.time() + (12 * (3718 -(88 + 30))) ;v90=774 -(720 + 51) ;end if (v90==(0 -0)) then if (v86~=(1827 -(421 + 1355))) then return;end if  not v19._storage.autoTask.enabled then return;end v90=1 -0 ;end if (v90==(2 + 1)) then tmrMacro:setOn();tmrMacro3:setOn();break;end if (v90==(1084 -(286 + 797))) then if  not v87:lower():find(v7("\46\1\129\195\234\57\26\139\208\165\45\78\131\134\190\57\29\137\134\174\61\78\132\199\167\57","\202\88\110\226\166")) then return;end emFortress=false;v90=2;end end end);onTextMessage(function(v91,v92) local v93=0 -0 ;while true do if (v93==(0 -0)) then if  not v92:lower():find(v7("\197\6\140\246\198\202\21\141\226\138\208\26\131\183\222\194\28\137\183\206\198\79\132\246\199\194","\170\163\111\226\151")) then return;end if  not v19._storage.autoTask.enabled then return;end v93=1;end if (v93==1) then storage.endTime=os.time() + ((445 -(397 + 42)) * (0 + 0)) ;break;end end end);onTalk(function(v94,v95,v96,v97,v98,v99) local v100=800 -(24 + 776) ;while true do local v558=0;while true do if (v558==0) then if (v100==(1 -0)) then contagemTaksu=785 -(222 + 563) ;tmrMacro2:setOn();if  not v19._storage.autoTask.enabled then return;end CaveBot.setOff();v100=3 -1 ;end if (v100==(0 + 0)) then if (v96~=(241 -(23 + 167))) then return;end if  not v97:lower():find(v7("\2\37\179\120\90\54\58\26\112\180\55\71\119\59\20\61\189\46\71\51\40","\73\113\80\210\88\46\87")) then return;end if  not v19._storage.autoTaksu.enabled then return;end storage.endTime2=os.time() + ((1800 -(690 + 1108)) * 3600) ;v100=1 + 0 ;end v558=1 + 0 ;end if (v558==(849 -(40 + 808))) then if (v100==(1 + 1)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\187\35\193\6\230\143","\135\225\76\173\114");CaveBot.setOn();return true;end break;end end end end);onTalk(function(v101,v102,v103,v104,v105,v106) local v107=0 -0 ;while true do local v559=0 + 0 ;while true do if (v559==(0 + 0)) then if (v107==(1 + 0)) then local v637=571 -(47 + 524) ;while true do if (v637==(0 + 0)) then contagemTaksu=1;contagem=contagem + 1 ;v637=1;end if (v637==(2 -1)) then storage.endTime2=os.time() + ((8 -2) * 3600) ;v107=2;break;end end end if (3==v107) then local v638=0;while true do if (0==v638) then CaveBot.setOn();return true;end end end v559=2 -1 ;end if (v559==(1727 -(1165 + 561))) then if (v107==(1 + 1)) then tmrMacro2:setOn();CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\151\210\28\228\121\248","\150\205\189\112\144\24");v107=9 -6 ;end if ((0 + 0)==v107) then if (v103~=(530 -(341 + 138))) then return;end if  not v104:lower():find(v7("\27\252\173\185\236\184\180\14\236\248\163\169\168\231\10\255\189\189\165\178","\199\122\141\216\208\204\221")) then return;end if  not v19._storage.autoTaksu.enabled then return;end v107=1;end break;end end end end);onTalk(function(v108,v109,v110,v111,v112,v113) if  not v19._storage.autoTaksu.enabled then return;end if (v110~=(14 + 37)) then return;end if  not v111:lower():find(v7("\39\136\190\79\15\200\2\24\44\138\176\78\13\155","\112\69\228\223\44\100\232\113")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\246\19\6\208\189\111\142\221\17\8\209\191\111","\230\180\127\103\179\214\28");CaveBot.setOn();return true;end);onTalk(function(v115,v116,v117,v118,v119,v120) local v121=0;while true do if (v121==(3 -1)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\141\162\16\74\183\230\202\191\189\16\79\165\254","\175\204\201\113\36\214\139");CaveBot.setOn();v121=329 -(89 + 237) ;end if (v121==(9 -6)) then return true;end if (v121==0) then if  not v19._storage.autoTaksu.enabled then return;end if (v117~=(107 -56)) then return;end v121=1;end if (v121==1) then if  not v118:lower():find(v7("\141\14\94\72\229\76\229\159","\128\236\101\63\38\132\33")) then return;end CaveBot.setOff();v121=2;end end end);onTalk(function(v122,v123,v124,v125,v126,v127) local v128=0;while true do local v560=0;while true do if (v560==(881 -(581 + 300))) then if (v128==3) then return true;end if (v128==(1221 -(855 + 365))) then if  not v125:lower():find(v7("\74\205\56\201\23\79\197\38","\100\39\172\85\188")) then return;end CaveBot.setOff();v128=4 -2 ;end v560=1 + 0 ;end if (v560==1) then if (v128==2) then tyrBot.storage._configs.cavebot_configs.selected=v7("\128\121\180\149\32\165\113\173\129\56\190\109","\83\205\24\217\224");CaveBot.setOn();v128=3;end if ((1235 -(1030 + 205))==v128) then if  not v19._storage.autoTaksu.enabled then return;end if (v124~=(48 + 3)) then return;end v128=1 + 0 ;end break;end end end end);onTalk(function(v129,v130,v131,v132,v133,v134) if  not v19._storage.autoTaksu.enabled then return;end if (v131~=51) then return;end if  not v132:lower():find(v7("\239\215\204\51\237\204\222","\93\134\165\173")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\151\224\192\204\49\199\166\127\181\225\212","\30\222\146\161\162\90\174\210");CaveBot.setOn();return true;end);onTalk(function(v136,v137,v138,v139,v140,v141) if  not v19._storage.autoTaksu.enabled then return;end if (v138~=(337 -(156 + 130))) then return;end if  not v139:lower():find(v7("\246\70\121\4\234\76\121\74\228\92\115\2\224\92\99","\106\133\46\16")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\107\40\122\242\85\66\81\33\97\255\82\69\74\51","\32\56\64\19\156\58");CaveBot.setOn();return true;end);onTalk(function(v143,v144,v145,v146,v147,v148) if  not v19._storage.autoTaksu.enabled then return;end if (v145~=51) then return;end if  not v146:lower():find(v7("\81\221\247\89\91\224\137\73","\224\58\168\133\54\58\146")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\114\67\89\242\116\148\142\24","\107\57\54\43\157\21\230\231");CaveBot.setOn();return true;end);onTalk(function(v150,v151,v152,v153,v154,v155) local v156=0;while true do if (v156==(0 -0)) then if  not v19._storage.autoTaksu.enabled then return;end if (v152~=(85 -34)) then return;end v156=1 -0 ;end if (v156==(1 + 2)) then return true;end if (v156==(2 + 0)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\18\186\138\73\237\112\118","\24\92\207\225\44\131\25");CaveBot.setOn();v156=72 -(10 + 59) ;end if (v156==(1 + 0)) then if  not v153:lower():find(v7("\213\158\26\240\183\213\193\200","\175\187\235\113\149\217\188")) then return;end CaveBot.setOff();v156=9 -7 ;end end end);onTalk(function(v157,v158,v159,v160,v161,v162) local v163=1163 -(671 + 492) ;while true do if (v163==(1 + 0)) then if  not v160:lower():find(v7("\93\214\182\67\22\61\88\221\185\71\30\110","\29\43\179\216\44\123")) then return;end CaveBot.setOff();v163=1217 -(369 + 846) ;end if (0==v163) then if  not v19._storage.autoTaksu.enabled then return;end if (v159~=(14 + 37)) then return;end v163=1 + 0 ;end if (2==v163) then tyrBot.storage._configs.cavebot_configs.selected=v7("\139\220\46\67\176\202\46\77\182\220","\44\221\185\64");CaveBot.setOn();v163=3;end if (v163==3) then return true;end end end);onTalk(function(v164,v165,v166,v167,v168,v169) local v170=1945 -(1036 + 909) ;while true do local v561=0;while true do if (v561==(0 + 0)) then if (v170==(2 -0)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\154\93\42\46\54\48\189","\81\206\60\83\91\79");CaveBot.setOn();v170=206 -(11 + 192) ;end if (v170==(1 + 0)) then if  not v167:lower():find(v7("\21\230\81\74\106\0\244","\19\97\135\40\63")) then return;end CaveBot.setOff();v170=177 -(135 + 40) ;end v561=1;end if (v561==(2 -1)) then if (v170==0) then if  not v19._storage.autoTaksu.enabled then return;end if (v166~=51) then return;end v170=1;end if (v170==(2 + 1)) then return true;end break;end end end end);onTalk(function(v171,v172,v173,v174,v175,v176) local v177=0 -0 ;while true do local v562=0 -0 ;while true do if (v562==(177 -(50 + 126))) then if (v177==2) then tyrBot.storage._configs.cavebot_configs.selected=v7("\156\45\121\24\33\250\253\171","\143\216\66\30\126\68\155");CaveBot.setOn();v177=8 -5 ;end if (v177==3) then return true;end break;end if (v562==(0 + 0)) then if (v177==(1414 -(1233 + 180))) then if  not v174:lower():find(v7("\74\164\215\50\41\198\76\182\93","\196\46\203\176\18\79\163\45")) then return;end CaveBot.setOff();v177=2;end if (v177==0) then if  not v19._storage.autoTaksu.enabled then return;end if (v173~=(1020 -(522 + 447))) then return;end v177=1422 -(107 + 1314) ;end v562=1 + 0 ;end end end end);onTalk(function(v178,v179,v180,v181,v182,v183) local v184=0 -0 ;while true do if (v184==1) then if  not v181:lower():find(v7("\161\199\3\200\205\182\196","\129\202\168\109\171\165\195\183")) then return;end CaveBot.setOff();v184=1 + 1 ;end if (v184==3) then return true;end if (v184==(0 -0)) then if  not v19._storage.autoTaksu.enabled then return;end if (v180~=(201 -150)) then return;end v184=1911 -(716 + 1194) ;end if (v184==(1 + 1)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\9\87\57\219\214\1","\134\66\56\87\184\190\116");CaveBot.setOn();v184=1 + 2 ;end end end);onTalk(function(v185,v186,v187,v188,v189,v190) local v191=503 -(74 + 429) ;local v192;while true do if (v191==0) then v192=0;while true do if (v192==3) then return true;end if (v192==(1 -0)) then if  not v188:lower():find(v7("\47\58\12\183\28\255\46\59\124\55\12\186\11\248","\85\92\81\105\219\121\139\65")) then return;end CaveBot.setOff();v192=1 + 1 ;end if (2==v192) then tyrBot.storage._configs.cavebot_configs.selected=v7("\206\184\85\73\121\203\242\189\86\64\125\205\238","\191\157\211\48\37\28");CaveBot.setOn();v192=3;end if (v192==(0 -0)) then if  not v19._storage.autoTaksu.enabled then return;end if (v187~=(37 + 14)) then return;end v192=2 -1 ;end end break;end end end);onTalk(function(v193,v194,v195,v196,v197,v198) if  not v19._storage.autoTaksu.enabled then return;end if (v195~=(125 -74)) then return;end if  not v196:lower():find(v7("\219\26\226\21\54\204","\90\191\127\148\124")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\92\130\56\30\116\148","\119\24\231\78");return true;end);onTalk(function(v200,v201,v202,v203,v204,v205) local v206=0;while true do if (v206==(434 -(279 + 154))) then if  not v203:lower():find(v7("\131\38\164\94\207\85\26\139\62","\113\226\77\197\42\188\32")) then return;end CaveBot.gotoLabel(v7("\62\19\231\188\41\2\253\167","\213\90\118\148"));break;end if (v206==(778 -(454 + 324))) then if  not v19._storage.autoTaksu.enabled then return;end if (v202~=(41 + 10)) then return;end v206=18 -(12 + 5) ;end end end);onTalk(function(v207,v208,v209,v210,v211,v212) local v213=0;while true do local v563=0;while true do if (v563==(0 + 0)) then if (v213==(4 -2)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\35\94\138\133\137\44\164\227\27\79\144\152","\144\112\54\227\235\230\78\205");CaveBot.setOn();v213=2 + 1 ;end if (v213==(1093 -(277 + 816))) then if  not v19._storage.autoTaksu.enabled then return;end if (v209~=(217 -166)) then return;end v213=1184 -(1058 + 125) ;end v563=1;end if ((1 + 0)==v563) then if (v213==(978 -(815 + 160))) then return true;end if (v213==(4 -3)) then if  not v210:lower():find(v7("\72\38\189\88\66\89\39\244\69\70\66\61\167","\45\59\78\212\54")) then return;end CaveBot.setOff();v213=2;end break;end end end end);onTalk(function(v214,v215,v216,v217,v218,v219) local v220=0 -0 ;while true do if (v220==(1 + 2)) then return true;end if (v220==(5 -3)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\101\142\238\36\67\134\241\34\93","\77\46\231\131");CaveBot.setOn();v220=1901 -(41 + 1857) ;end if (v220==0) then if  not v19._storage.autoTaksu.enabled then return;end if (v216~=(1944 -(1222 + 671))) then return;end v220=2 -1 ;end if (v220==(1 -0)) then if  not v217:lower():find(v7("\184\33\2\245\221\90\161\39\28","\59\211\72\111\156\176")) then return;end CaveBot.setOff();v220=2;end end end);onTalk(function(v221,v222,v223,v224,v225,v226) local v227=1182 -(229 + 953) ;while true do if (v227==0) then if  not v19._storage.autoTaksu.enabled then return;end if (v223~=51) then return;end v227=1775 -(1111 + 663) ;end if (v227==(1581 -(874 + 705))) then tyrBot.storage._configs.cavebot_configs.selected=v7("\123\27\37\161\252\177\81\95\93\28\52\164\244\164\74\84\90\22\58\187\228","\58\46\119\81\200\145\208\37");CaveBot.setOn();v227=3;end if (v227==(1 + 0)) then if  not v224:lower():find(v7("\175\88\162\73\183\85\162\69\250\71\189\69\182\81\162\79\180\71","\32\218\52\214")) then return;end CaveBot.setOff();v227=2 + 0 ;end if (v227==(6 -3)) then return true;end end end);onTalk(function(v228,v229,v230,v231,v232,v233) local v234=0 + 0 ;while true do if (v234==(680 -(642 + 37))) then if  not v231:lower():find(v7("\33\133\57\190\166\168\52\36\153\35","\86\75\236\80\204\201\221")) then return;end CaveBot.setOff();v234=1 + 1 ;end if (v234==(1 + 1)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\88\72\126\151\241\158\112\78\98\150","\235\18\33\23\229\158");CaveBot.setOn();v234=7 -4 ;end if (v234==(454 -(233 + 221))) then if  not v19._storage.autoTaksu.enabled then return;end if (v230~=(117 -66)) then return;end v234=1 + 0 ;end if ((1544 -(718 + 823))==v234) then return true;end end end);onTalk(function(v235,v236,v237,v238,v239,v240) if  not v19._storage.autoTaksu.enabled then return;end if (v237~=51) then return;end if  not v238:lower():find(v7("\66\181\212\181\89\180\210","\219\48\218\161")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\214\126\105\71\210\65\244\229\122\111\92","\128\132\17\28\41\187\47");CaveBot.setOn();return true;end);onTalk(function(v242,v243,v244,v245,v246,v247) if  not v19._storage.autoTaksu.enabled then return;end if (v244~=51) then return;end if  not v245:lower():find(v7("\5\51\20\49\29\18\60\7\49\88\18","\61\97\82\102\90")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\136\47\185\64\212\89\31\2\169\61","\105\204\78\203\43\167\55\126");CaveBot.setOn();return true;end);onTalk(function(v249,v250,v251,v252,v253,v254) local v255=0 + 0 ;while true do local v564=805 -(266 + 539) ;while true do if (v564==1) then if (v255==(2 -1)) then if  not v252:lower():find(v7("\162\175\39\17\6\68\212\90\160\166\38\10\28\10\212","\49\197\202\67\126\115\100\167")) then return;end CaveBot.setOff();v255=1227 -(636 + 589) ;end break;end if (v564==0) then if (v255==(4 -2)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\16\94\219\38\149\69\85\50\87\218\61\143\88\77","\62\87\59\191\73\224\54");return true;end if (v255==(0 -0)) then if  not v19._storage.autoTaksu.enabled then return;end if (v251~=(41 + 10)) then return;end v255=1;end v564=1 + 0 ;end end end end);onTalk(function(v256,v257,v258,v259,v260,v261) if  not v19._storage.autoTaksu.enabled then return;end if (v258~=51) then return;end if  not v259:lower():find(v7("\254\13\238\193\167\4\239\219\238\7\233","\169\135\98\154")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\242\120\48\92\251\38\218\194\114\55","\168\171\23\68\52\157\83");CaveBot.setOn();return true;end);onTalk(function(v263,v264,v265,v266,v267,v268) local v269=1015 -(657 + 358) ;while true do local v565=0 -0 ;local v566;while true do if (v565==0) then v566=0 -0 ;while true do if (v566==0) then if (v269==(1187 -(1151 + 36))) then if  not v19._storage.autoTaksu.enabled then return;end if (v265~=51) then return;end v269=1 + 0 ;end if (v269==(1 + 2)) then return true;end v566=2 -1 ;end if (1==v566) then if (v269==2) then tyrBot.storage._configs.cavebot_configs.selected=v7("\171\168\201\248\95\234\132\168\204\238\67\254\139\180\210","\159\224\199\167\155\55");CaveBot.setOn();v269=1835 -(1552 + 280) ;end if (v269==(835 -(64 + 770))) then if  not v266:lower():find(v7("\255\126\251\174\45\56\199\240\126\254\184\54","\231\148\17\149\205\69\77")) then return;end CaveBot.setOff();v269=2 + 0 ;end break;end end break;end end end end);onTalk(function(v270,v271,v272,v273,v274,v275) local v276=0 -0 ;local v277;while true do if (v276==(0 + 0)) then v277=1243 -(157 + 1086) ;while true do if ((0 -0)==v277) then if  not v19._storage.autoTaksu.enabled then return;end if (v272~=(223 -172)) then return;end v277=1 -0 ;end if (v277==(2 -0)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\165\238\68\57\19\91\123\152\252\71\33\7","\26\236\157\44\82\114\44");CaveBot.setOn();v277=822 -(599 + 220) ;end if (v277==(5 -2)) then return true;end if (v277==1) then if  not v273:lower():find(v7("\254\224\52\219\252\242\43\211\228","\178\151\147\92")) then return;end CaveBot.setOff();v277=1933 -(1813 + 118) ;end end break;end end end);onTalk(function(v278,v279,v280,v281,v282,v283) if  not v19._storage.autoTaksu.enabled then return;end if (v280~=(38 + 13)) then return;end if  not v281:lower():find(v7("\56\43\219\94\45\47\209\94\57","\59\74\78\181")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\23\212\84\95\180\36\213\95","\211\69\177\58\58");CaveBot.setOn();return true;end);onTalk(function(v285,v286,v287,v288,v289,v290) if  not v19._storage.autoTaksu.enabled then return;end if (v287~=(1268 -(841 + 376))) then return;end if  not v288:lower():find(v7("\164\240\105\231\236\198\178\165\106\244\231\207\164","\171\215\133\25\149\137")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\210\221\34\232\234\61\249\81\224\198\54\233","\34\129\168\82\154\143\80\156");CaveBot.setOn();return true;end);onTalk(function(v292,v293,v294,v295,v296,v297) local v298=0 -0 ;while true do local v567=0 + 0 ;while true do if ((2 -1)==v567) then if (v298==(860 -(464 + 395))) then if  not v295:lower():find(v7("\135\190\50\8\67\14\141\128\179\39\3\91","\233\229\210\83\107\40\46")) then return;end CaveBot.setOff();v298=2;end if ((7 -4)==v298) then return true;end break;end if (v567==0) then if (v298==2) then tyrBot.storage._configs.cavebot_configs.selected=v7("\195\78\51\213\14\229\71\51\194\13\251\77\62\194\4\207","\101\161\34\82\182");CaveBot.setOn();v298=2 + 1 ;end if (v298==0) then if  not v19._storage.autoTaksu.enabled then return;end if (v294~=(888 -(467 + 370))) then return;end v298=1 -0 ;end v567=1 + 0 ;end end end end);onTalk(function(v299,v300,v301,v302,v303,v304) if  not v19._storage.autoTaksu.enabled then return;end if (v301~=(174 -123)) then return;end if  not v302:lower():find(v7("\252\30\76\231\212\235\194\37\241\2\83\247\213\241","\78\136\109\57\158\187\130\226")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\10\44\236\232\49\54\242\232\49\53\240\255\42\62\242\226\43","\145\94\95\153");CaveBot.setOn();return true;end);onTalk(function(v306,v307,v308,v309,v310,v311) if  not v19._storage.autoTaksu.enabled then return;end if (v308~=(8 + 43)) then return;end if  not v309:lower():find(v7("\246\196\31\222\79\190\238","\215\157\173\116\181\46")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\30\189\128\249\219\60\160\138\249\201\32","\186\85\212\235\146");CaveBot.setOn();return true;end);onTalk(function(v313,v314,v315,v316,v317,v318) local v319=0 -0 ;while true do local v568=520 -(150 + 370) ;while true do if (v568==1) then if (v319==3) then return true;end if (v319==(1282 -(74 + 1208))) then if  not v19._storage.autoTaksu.enabled then return;end if (v315~=51) then return;end v319=2 -1 ;end break;end if (v568==(0 -0)) then if (v319==(1 + 0)) then if  not v316:lower():find(v7("\212\132\24\241\52\174\75\193\142\4\238\48\225\86\209","\56\162\225\118\158\89\142")) then return;end CaveBot.setOff();v319=392 -(14 + 376) ;end if (v319==(3 -1)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\106\0\206\160\47\203\95\10\210\191\43\215\82\17\193\164\49\205","\184\60\101\160\207\66");CaveBot.setOn();v319=2 + 1 ;end v568=1 + 0 ;end end end end);onTalk(function(v320,v321,v322,v323,v324,v325) local v326=0 + 0 ;local v327;while true do if (v326==0) then v327=0 -0 ;while true do if (v327==(2 + 0)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\50\199\131\240\254\198\24\198\151","\167\115\181\226\155\138");CaveBot.setOn();v327=81 -(23 + 55) ;end if (v327==(0 -0)) then if  not v19._storage.autoTaksu.enabled then return;end if (v322~=(35 + 16)) then return;end v327=1 + 0 ;end if (1==v327) then if  not v323:lower():find(v7("\48\144\125\183\34","\220\81\226\28")) then return;end CaveBot.setOff();v327=2 -0 ;end if (v327==(1 + 2)) then return true;end end break;end end end);onTalk(function(v328,v329,v330,v331,v332,v333) local v334=901 -(652 + 249) ;local v335;while true do if (v334==(0 -0)) then v335=0;while true do if (v335==(1870 -(708 + 1160))) then tyrBot.storage._configs.cavebot_configs.selected=v7("\119\73\193\103\32\77\69\192\97\49\79\89\219","\80\36\42\174\21");CaveBot.setOn();v335=8 -5 ;end if (v335==1) then if  not v331:lower():find(v7("\241\33\232\78\107\120\201\236\49","\166\130\66\135\60\27\17")) then return;end CaveBot.setOff();v335=3 -1 ;end if (v335==3) then return true;end if (0==v335) then if  not v19._storage.autoTaksu.enabled then return;end if (v330~=(78 -(10 + 17))) then return;end v335=1 + 0 ;end end break;end end end);onTalk(function(v336,v337,v338,v339,v340,v341) local v342=1732 -(1400 + 332) ;local v343;while true do if (v342==0) then v343=0 -0 ;while true do local v623=1908 -(242 + 1666) ;while true do if ((1 + 0)==v623) then if (v343==2) then tyrBot.storage._configs.cavebot_configs.selected=v7("\152\49\170\127\171\190\78\167\172","\212\217\67\203\20\223\223\37");CaveBot.setOn();v343=3;end if (v343==(1 + 0)) then if  not v339:lower():find(v7("\79\2\54\121\64\25\51\127\65\3","\26\46\112\87")) then return;end CaveBot.setOff();v343=2 + 0 ;end break;end if ((940 -(850 + 90))==v623) then if (v343==0) then if  not v19._storage.autoTaksu.enabled then return;end if (v338~=(89 -38)) then return;end v343=1391 -(360 + 1030) ;end if (v343==(3 + 0)) then return true;end v623=2 -1 ;end end end break;end end end);onTalk(function(v344,v345,v346,v347,v348,v349) if  not v19._storage.autoTaksu.enabled then return;end if (v346~=51) then return;end if  not v347:lower():find(v7("\173\140\165\199\169\195\232\198\191\159\165\219\180\136","\178\218\237\200")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\129\180\235\197\162\180\237\195\163","\176\214\213\134");CaveBot.setOn();return true;end);onTalk(function(v351,v352,v353,v354,v355,v356) local v357=0;while true do if (v357==(0 -0)) then if  not v19._storage.autoTaksu.enabled then return;end if (v353~=(1712 -(909 + 752))) then return;end v357=1;end if (v357==2) then storage._configs.cavebot_configs.selected=v7("\54\252\60\35\119\31\232\33\53\125\1\232","\22\114\157\85\84");CaveBot.setOn();v357=1226 -(109 + 1114) ;end if (v357==(1 -0)) then if  not v354:find(v7("\177\169\253\148\140\87\80\180\154\183\217\189\69","\57\148\205\214\180\200\54")) then return;end CaveBot.setOff();v357=1 + 1 ;end if (v357==3) then return true;end end end);onTalk(function(v358,v359,v360,v361,v362,v363) local v364=0;local v365;while true do if (v364==(242 -(6 + 236))) then v365=0 + 0 ;while true do if (v365==3) then return true;end if (v365==1) then if  not v361:lower():find(v7("\210\202\30\212\84\228\173\215","\200\164\171\115\164\61\150")) then return;end CaveBot.setOff();v365=2 + 0 ;end if (v365==0) then if  not v19._storage.autoTaksu.enabled then return;end if (v360~=51) then return;end v365=2 -1 ;end if (v365==2) then tyrBot.storage._configs.cavebot_configs.selected=v7("\136\245\14\85\138\172\241\23\68\136\173\225","\227\222\148\99\37");CaveBot.setOn();v365=4 -1 ;end end break;end end end);onTalk(function(v366,v367,v368,v369,v370,v371) local v372=1133 -(1076 + 57) ;local v373;while true do if (v372==(0 + 0)) then v373=0;while true do local v624=689 -(579 + 110) ;while true do if (v624==1) then if ((1 + 1)==v373) then tyrBot.storage._configs.cavebot_configs.selected=v7("\107\119\126\12\122\185\76\80\99\103\29\103\174\73\73\119\120\15\102","\45\61\22\19\124\19\203");CaveBot.setOn();v373=3 + 0 ;end if (v373==(0 + 0)) then if  not v19._storage.autoTaksu.enabled then return;end if (v368~=(458 -(174 + 233))) then return;end v373=2 -1 ;end break;end if (v624==(0 -0)) then if (v373==(1 + 0)) then if  not v369:lower():find(v7("\37\83\95\230\240\33\87\18\251\236\39\83\70\243\253\32","\153\83\50\50\150")) then return;end CaveBot.setOff();v373=2;end if (v373==3) then return true;end v624=1175 -(663 + 511) ;end end end break;end end end);onTalk(function(v374,v375,v376,v377,v378,v379) local v380=0;while true do if (v380==(1 + 0)) then if  not v377:lower():find(v7("\200\16\24\254\11\99","\217\161\114\109\149\98\16")) then return;end CaveBot.setOff();v380=1 + 1 ;end if (v380==2) then tyrBot.storage._configs.cavebot_configs.selected=v7("\59\34\45\119\181\96\19\43\43\105","\20\114\64\88\28\220");CaveBot.setOn();v380=9 -6 ;end if (0==v380) then if  not v19._storage.autoTaksu.enabled then return;end if (v376~=51) then return;end v380=1 + 0 ;end if (v380==3) then return true;end end end);onTalk(function(v381,v382,v383,v384,v385,v386) local v387=0;while true do if ((0 -0)==v387) then if  not v19._storage.autoTaksu.enabled then return;end if (v383~=(123 -72)) then return;end v387=1 + 0 ;end if (v387==(3 -1)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\229\226\31\242\9\197\238\15\244\14\204\236\14\238","\122\173\135\125\155");CaveBot.setOn();v387=3 + 0 ;end if ((1 + 2)==v387) then return true;end if (v387==(723 -(478 + 244))) then if  not v384:lower():find(v7("\57\4\208\189\184\195\181\56\19\221\167","\221\81\97\178\212\152\176")) then return;end CaveBot.setOff();v387=519 -(440 + 77) ;end end end);onTextMessage(function(v388,v389) if  not v19._storage.autoTask.enabled then return;end if  not v389:lower():find(v7("\135\211\9\184\43\36\218\133\129\1\178\62\63\201\137\196","\168\228\161\96\217\95\81")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\250\218\47\81\46\89\222\203\33\80\59\86\213","\55\187\177\78\60\79");CaveBot.setOn();end);onTextMessage(function(v391,v392) if  not v19._storage.autoTask.enabled then return;end if  not v392:lower():find(v7("\46\220\86\234\82\218\146\44\142\94\224\71\194\129\35\218\80","\224\77\174\63\139\38\175")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\165\74\89\35\133\79\76\33\158\78\84\58\133\79","\78\228\33\56");CaveBot.setOn();end);onTextMessage(function(v394,v395) if  not v19._storage.autoTask.enabled then return;end if  not v395:lower():find(v7("\205\108\187\2\145\219\108\179\67\132\220\127\185\6\139","\229\174\30\210\99")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\58\255\135\90\247\50\53\15\236\136","\89\123\141\230\49\141\93");CaveBot.setOn();end);onTextMessage(function(v397,v398) local v399=0 + 0 ;while true do if (v399==(3 -2)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\46\180\44\116\253\231\3\178\44\113","\136\111\198\77\31\135");v399=1558 -(655 + 901) ;end if (v399==(0 + 0)) then if  not v19._storage.autoTask.enabled then return;end if  not v398:lower():find(v7("\240\99\255\13\4\95\225\112\182\13\2\75\248","\42\147\17\150\108\112")) then return;end v399=1;end if (v399==(2 + 0)) then CaveBot.setOn();break;end end end);onTextMessage(function(v400,v401) local v402=0 + 0 ;local v403;while true do if (v402==(0 -0)) then v403=1445 -(695 + 750) ;while true do if (v403==(0 -0)) then if  not v19._storage.autoTask.enabled then return;end if  not v401:lower():find(v7("\1\27\174\87\169\241\5\168\66\11\174\93\182\241\21\168\6\6","\201\98\105\199\54\221\132\119")) then return;end v403=1 -0 ;end if (v403==(3 -2)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\155\5\136\42\23\55\173\189\3\153\46\14\33\173\183","\204\217\108\227\65\98\85");v403=2;end if (v403==(353 -(285 + 66))) then CaveBot.setOn();break;end end break;end end end);onTextMessage(function(v404,v405) if  not v19._storage.autoTask.enabled then return;end if  not v405:lower():find(v7("\93\209\252\228\56\213\76\194\181\237\41\194\87\131\230\237\37\210\81","\160\62\163\149\133\76")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\254\165\15\38\208\222\169\31\32\217\217\172\25\46\205","\163\182\192\109\79");CaveBot.setOn();end);onTextMessage(function(v407,v408) local v409=0 -0 ;while true do if ((1312 -(682 + 628))==v409) then CaveBot.setOn();break;end if (v409==(1 + 0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\16\3\4\254\48\15\23\226\52\18\12\227","\141\88\102\109");v409=301 -(176 + 123) ;end if (v409==0) then if  not v19._storage.autoTask.enabled then return;end if  not v408:lower():find(v7("\55\52\9\193\225\33\52\1\128\253\49\47\19\200\252","\149\84\70\96\160")) then return;end v409=1 + 0 ;end end end);onTextMessage(function(v410,v411) if  not v19._storage.autoTask.enabled then return;end if  not v411:lower():find(v7("\176\65\195\113\14\40\71\192\243\90\200\101\17\52","\161\211\51\170\16\122\93\53")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\210\172\167\35\242\180\189\36\239\175\188","\72\155\206\210");CaveBot.setOn();end);onTextMessage(function(v413,v414) local v415=0 + 0 ;while true do if ((270 -(239 + 30))==v415) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\113\5\38\72\83\30\61\73\84\3\38\72","\38\56\119\71");v415=1 + 1 ;end if (v415==(0 + 0)) then if  not v19._storage.autoTask.enabled then return;end if  not v414:lower():find(v7("\69\104\93\15\39\83\104\85\78\58\84\123\90\5\58","\83\38\26\52\110")) then return;end v415=1 -0 ;end if (v415==2) then CaveBot.setOn();break;end end end);onTextMessage(function(v416,v417) local v418=0 -0 ;while true do if (v418==(316 -(306 + 9))) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\252\128\254\66\202\216\128\235\72\212\217\155\240\69\203\215\143","\191\182\225\159\41");v418=6 -4 ;end if (v418==0) then if  not v19._storage.autoTask.enabled then return;end if  not v417:lower():find(v7("\240\253\81\215\49\67\225\238\24\220\36\87\248\250\86\215\101\66\242\228\87","\54\147\143\56\182\69")) then return;end v418=1;end if (v418==(1 + 1)) then CaveBot.setOn();break;end end end);onTextMessage(function(v419,v420) local v421=0 + 0 ;while true do if (2==v421) then CaveBot.setOn();break;end if (v421==1) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\167\57\87\234\90\12\150\51\72\246\82\12","\98\236\92\36\130\51");v421=1 + 1 ;end if ((0 -0)==v421) then if  not v19._storage.autoTask.enabled then return;end if  not v420:lower():find(v7("\40\0\33\84\159\146\208\42\82\35\80\152\143\203\37","\162\75\114\72\53\235\231")) then return;end v421=1376 -(1140 + 235) ;end end end);onTextMessage(function(v422,v423) local v424=0 + 0 ;while true do if ((0 + 0)==v424) then if  not v19._storage.autoTask.enabled then return;end if  not v423:lower():find(v7("\167\11\5\187\81\189\167\49\228\20\13\183\80\187\189\57","\80\196\121\108\218\37\200\213")) then return;end v424=1;end if ((1 + 0)==v424) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\45\114\15\106\88\6\131\26\124\14\107\74\0","\234\96\19\98\31\43\110");v424=54 -(33 + 19) ;end if (v424==(1 + 1)) then CaveBot.setOn();break;end end end);onTextMessage(function(v425,v426) if  not v19._storage.autoTask.enabled then return;end if  not v426:lower():find(v7("\5\13\91\198\184\103\153\7\95\95\206\190\115\159\21\10","\235\102\127\50\167\204\18")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\125\168\231\34\80\61\69\187\250\47\80\47\94","\78\48\193\149\67\36");CaveBot.setOn();end);onTextMessage(function(v428,v429) if  not v19._storage.autoTask.enabled then return;end if  not v429:lower():find(v7("\51\12\137\25\85\37\12\129\88\83\57\28\129\17\64\35\31\142","\33\80\126\224\120")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\222\161\1\197\85\237\187\2\202\70\227\164\23\197\82","\60\140\200\99\164");CaveBot.setOn();end);onTextMessage(function(v431,v432) local v433=0;while true do if (v433==(0 -0)) then if  not v19._storage.autoTask.enabled then return;end if  not v432:lower():find(v7("\132\230\13\39\182\146\230\5\102\177\132\251\22\54\171\136\250","\194\231\148\100\70")) then return;end v433=1 + 0 ;end if (v433==(1 -0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\117\79\206\177\230\193\73\66\219\172\250\220\71\66","\168\38\44\161\195\150");v433=2;end if (v433==2) then CaveBot.setOn();break;end end end);onTextMessage(function(v434,v435) local v436=0 + 0 ;while true do if (v436==(691 -(586 + 103))) then CaveBot.setOn();break;end if (v436==(0 + 0)) then if  not v19._storage.autoTask.enabled then return;end if  not v435:lower():find(v7("\131\238\139\119\36\253\164\23\192\239\135\120\51\224\185\3","\118\224\156\226\22\80\136\214")) then return;end v436=2 -1 ;end if (v436==(1489 -(1309 + 179))) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\113\235\87\131\74\225\76\154\77\226\77\129\76","\224\34\142\57");v436=2 -0 ;end end end);onTextMessage(function(v437,v438) local v439=0 + 0 ;while true do if (v439==0) then if  not v438:lower():find(v7("\200\168\198\216\51\251\92\78\204\162\196\209\122\235\82\27\158\166\214\157\103\240\79\11\216\166\214\157\119\244\29\6\209\173\192\157\119\244\29\3\209\169\214\201\97\254\78","\110\190\199\165\189\19\145\61")) then return;end CaveBot.setOff();break;end end end);onTextMessage(function(v440,v441) local v442=0;while true do if (v442==(0 -0)) then if  not v19._storage.autoTask.enabled then return;end if  not v441:lower():find(v7("\217\249\126\233\159\210\200\234\55\251\158\215\200\238\122\237\203\212\219\229\115","\167\186\139\23\136\235")) then return;end v442=1 + 0 ;end if (v442==(3 -1)) then CaveBot.setOn();break;end if (v442==(1 -0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\41\160\152\31\31\184\141\30\27\187\140\23\21\185\156\12\20","\109\122\213\232");v442=2;end end end);onTextMessage(function(v443,v444) if  not v19._storage.autoTask.enabled then return;end if  not v444:lower():find(v7("\237\229\171\49\250\226\176\49\174\227\177\37\247\248\171\112\229\238\173\58\231\249","\80\142\151\194")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\55\213\98\85\12\207\124\85\12\204\126\66\25\201\123\88\2\200","\44\99\166\23");CaveBot.setOn();end);onTextMessage(function(v446,v447) local v448=609 -(295 + 314) ;while true do if (v448==(2 -1)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\198\15\61\25\143\89\12\115\224\8\44\28\135\76\23\120\233\12\37\4\131\86","\22\147\99\73\112\226\56\120");v448=2;end if (v448==(1964 -(1300 + 662))) then CaveBot.setOn();break;end if (v448==(0 -0)) then if  not v19._storage.autoTask.enabled then return;end if  not v447:lower():find(v7("\127\229\32\55\39\177\110\246\105\35\63\176\117\250\40\34\54\228\111\252\44\58\54\176\115\249","\196\28\151\73\86\83")) then return;end v448=1;end end end);onTextMessage(function(v449,v450) if  not v19._storage.autoTask.enabled then return;end if  not v450:lower():find(v7("\187\103\235\244\153\173\103\227\181\155\185\120\242\252\159\189","\237\216\21\130\149")) then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\180\79\82\79\185\219\91\152\65\83\75\177\199","\62\226\46\63\63\208\169");CaveBot.setOn();end);onTextMessage(function(v452,v453) local v454=1755 -(1178 + 577) ;while true do if (v454==(2 + 0)) then CaveBot.setOn();break;end if (v454==1) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\38\21\63\229\223\188\167\29\1\38\240\210\180\173\28\0\51\251","\194\112\116\82\149\182\206");v454=2;end if (v454==(0 -0)) then if  not v19._storage.autoTask.enabled then return;end if  not v453:lower():find(v7("\230\11\92\130\11\24\61\95\165\15\84\142\15\4\61\91\165\20\64\151\30\25\42\90","\62\133\121\53\227\127\109\79")) then return;end v454=1406 -(851 + 554) ;end end end);onTextMessage(function(v455,v456) local v457=0 + 0 ;while true do if (v457==(5 -3)) then CaveBot.setOn();break;end if (v457==(1 -0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\156\194\70\83\89\69\55\89\170\205","\45\203\163\43\38\35\42\91");v457=304 -(115 + 187) ;end if (v457==(0 + 0)) then if  not v19._storage.autoTask.enabled then return;end if  not v456:lower():find(v7("\58\186\69\25\212\247\28\56\232\91\25\205\247","\110\89\200\44\120\160\130")) then return;end v457=1 + 0 ;end end end);onTextMessage(function(v458,v459) local v460=0 -0 ;while true do if (v460==(1163 -(160 + 1001))) then CaveBot.setOn();break;end if (v460==(0 + 0)) then if  not v19._storage.autoTask.enabled then return;end if  not v459:lower():find(v7("\209\151\213\34\147\188\70\211\197\198\58\143\168\90","\52\178\229\188\67\231\201")) then return;end v460=1;end if (v460==(1 + 0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\27\88\88\5\249\70\44\45\85\81\10","\67\65\33\48\100\151\60");v460=3 -1 ;end end end);onTalk(function(v461,v462,v463,v464,v465,v466) if (v463~=(409 -(237 + 121))) then return;end if  not v464:lower():find(v7("\222\247\171\214\242\204\167\190\217\225\222\167\191\205\246\210\167\173\215\254\207\235\171\204\242\159\242\163\217\179\203\230\189\211","\147\191\135\206\184")) then return;end CaveBot.gotoLabel(v7("\134\49\163\207\200\80","\210\228\72\198\161\184\51"));end);onTalk(function(v467,v468,v469,v470,v471,v472) local v473=897 -(525 + 372) ;local v474;while true do if (v473==(0 -0)) then v474=0;while true do if (v474==(9 -6)) then local v653=0;while true do if (v653==(142 -(96 + 46))) then CaveBot.setOn();return true;end end end if (v474==(779 -(643 + 134))) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\97\15\129\31\36\1","\203\59\96\237\107\69\111\113");v474=3;end if ((0 + 0)==v474) then if (v469~=(122 -71)) then return;end if  not v19._storage.autoTaksu.enabled then return;end v474=1;end if ((3 -2)==v474) then if  not v470:lower():find(v7("\38\70\247\21\51\200\55\83\246\2\51\218\55\90\248\3\51\222\57\91\179\0\124\192\34\70\224\80\114\142\53\72\247\17\51\152\118\65\252\2\114\221","\174\86\41\147\112\19")) then return;end contagem=contagem + 1 + 0 ;v474=3 -1 ;end end break;end end end);onTalk(function(v475,v476,v477,v478,v479,v480) if (v477~=(104 -53)) then return;end if  not v19._storage.autoTaksu.enabled then return;end if  not v478:lower():find(v7("\50\25\175\228\113\245\196\48\23\236\226\62\253\151\49\27\173\161\37\241\196\47\86\173\245\56\230\214\32\23","\183\68\118\204\129\81\144")) then return;end CaveBot.gotoLabel(v7("\7\191","\226\110\205\16\132\107"));end);onTalk(function(v481,v482,v483,v484,v485,v486) local v487=0;local v488;while true do if ((719 -(316 + 403))==v487) then v488=0 + 0 ;while true do if (1==v488) then contagem=contagem + (2 -1) ;return true;end if (v488==(0 + 0)) then if (v483~=51) then return;end if  not v484:lower():find(v7("\239\198\243\208\82\255\202\245\153\69\238\131\243\204\64\171\214\236\205\72\230\194\160\205\64\248\200","\33\139\163\128\185")) then return;end v488=1;end end break;end end end);onTalk(function(v489,v490,v491,v492,v493,v494) local v495=0 -0 ;local v496;while true do if (v495==0) then v496=0;while true do local v625=0 + 0 ;while true do if (v625==0) then if (v496==(1 + 0)) then local v668=0;while true do if (v668==(0 -0)) then CaveBot.setOff();return true;end end end if (v496==(0 -0)) then if (v491~=51) then return;end if  not v492:lower():find(v7("\86\72\1\208\86\75\68\206\69\93\9\215\66\85\68\223\84\91\11\203\89\76","\190\55\56\100")) then return;end v496=1 -0 ;end break;end end end break;end end end);onTalk(function(v497,v498,v499,v500,v501,v502) local v503=0 + 0 ;while true do if (v503==(5 -2)) then return true;end if (v503==(1 + 1)) then tyrBot.storage._configs.cavebot_configs.selected=v7("\55\62\57\105\12\112","\30\109\81\85\29\109");CaveBot.setOn();v503=3;end if (v503==(2 -1)) then contagem=contagem + (18 -(12 + 5)) ;CaveBot.setOff();v503=2;end if ((0 -0)==v503) then if (v499~=(108 -57)) then return;end if  not v500:lower():find(v7("\70\160\56\27\83\241\246\87\163\53\4\18\241\179\87\191\57\16\18\240\179\5\239\40\31\0\232\224","\147\54\207\92\126\115\131")) then return;end v503=1;end end end);onTalk(function(v504,v505,v506,v507,v508,v509) local v510=0 -0 ;local v511;local v512;local v513;while true do if (v510==(0 -0)) then if (v506~=(11 + 40)) then return;end if  not v19._storage.autoTask.enabled then return;end if  not (v507:lower():find(v7("\251\116\66\179\118\219\239\239\116\70\183\36\158\233\242\49\93\184\34\219\238\233\112\88\185\118\218\249\191\52\80\253\118\214\243\237\112\71\250\118\155\248\180\49\89\191\56\203\232\240\98\20\179\118\155\248\180\49\71\179\49\203\242\251\126\71","\156\159\17\52\214\86\190")) or v507:lower():find(v7("\170\234\171\185\238\234\174\172\171\253\188\174\238\250\176\252\167\225\169\185\188\249\188\176\161\175\185\185\238\170\185\247\238\226\180\178\187\251\178\175\238\234\253\249\170\164\253\175\171\232\168\178\170\224\174","\220\206\143\221")) or v507:lower():find(v7("\130\120\59\18\152\201\193\150\120\63\22\202\140\199\139\61\36\25\204\201\192\144\124\33\24\152\200\215\198\56\41\92\152\223\215\129\104\35\19\215\223","\178\230\29\77\119\184\172"))) then return;end v511,v512,v513=v507:lower():match(v7("\189\251\14\80\62\184\253\177\24\26\100\180\181\246\79\31\60\177\181\179\3\21\98\236\250\173\74\30\55\176\176\186\65\82\55\235\240\185\31\21\115\247\230","\152\149\222\106\123\23"));v510=1;end if (v510==2) then v513=tonumber(v513) or (1973 -(1656 + 317)) ;if ((v511>=0) and (v512>=0) and (v513>=(0 + 0))) then local v630=0 + 0 ;local v631;while true do if ((2 -1)==v630) then tmrMacro3:setOn();break;end if (v630==(0 -0)) then v631=(v511 * (3954 -(5 + 349))) + (v512 * (284 -224)) + v513 ;storage.endTime3=os.time() + v631 ;v630=1272 -(266 + 1005) ;end end end contagem=contagem + 2 + 0 ;if v19._storage.autoChouji.enabled then CaveBot.setOff();delay(1500);tyrBot.storage._configs.cavebot_configs.selected=v7("\149\67\141\8\189\29\185\67\141\8\189\1","\111\195\44\225\124\220");CaveBot.setOn();elseif (contagem>=(10 -7)) then local v657=0;while true do if (v657==1) then CaveBot.setOn();contagem=0 -0 ;break;end if (v657==0) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\204\84\5\122\165\170\202\124\15\127\191\170\214","\203\184\38\96\19\203");v657=1697 -(561 + 1135) ;end end end break;end if (v510==(1 -0)) then if ( not v511 and  not v512) then v512,v513=v507:lower():match(v7("\149\99\242\8\252\157\43\255\77\160\201\41\229\3\176\157\110\179\71\254\148\102\229\70\178\200\40\242\76\166","\213\189\70\150\35"));end if ( not v512 and  not v513) then v513=v507:lower():match(v7("\7\16\112\67\6\21\103\13\72\64\122\12\64\70","\104\47\53\20"));end v511=tonumber(v511) or (0 -0) ;v512=tonumber(v512) or 0 ;v510=1068 -(507 + 559) ;end end end);onTalk(function(v514,v515,v516,v517,v518,v519) local v520=0;while true do if (v520==(0 -0)) then if (v516~=51) then return;end if  not v517:lower():find(v7("\47\124\122\68\142\51\114\57\83\203\56\127\112\91\193\44\51\120\82\142\45\114\107\68\200\56\96\57\69\203\121\123\118\75\203\121\119\124\1\195\54\125\106\85\220\54\96","\174\89\19\25\33")) then return;end v520=1;end if (v520==(3 -2)) then contagem=contagem + 1 ;CaveBot.setOff();v520=390 -(212 + 176) ;end if (v520==(907 -(250 + 655))) then tyrBot.storage._configs.cavebot_configs.selected=v7("\21\29\94\90\246\137","\107\79\114\50\46\151\231");CaveBot.setOn();break;end end end);onTalk(function(v521,v522,v523,v524,v525,v526) if  not isAutoChoujiEnabled() then return;end if (v523~=51) then return;end if  not v524:lower():find("no momento você ja realizou 3 de caçar monstros no dia de hoje") then return;end contagem=contagem + (2 -1) ;if v19._storage.autoTaksu.enabled then local v578=0 -0 ;while true do if (v578==1) then CaveBot.setOn();break;end if (v578==(0 -0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\58\174\176\42\129\55\167\195","\160\89\198\213\73\234\89\215");v578=1957 -(1869 + 87) ;end end elseif v19._storage.autoTask.enabled then local v626=0 -0 ;local v627;while true do if (v626==0) then v627=0;while true do if (v627==(1902 -(484 + 1417))) then CaveBot.setOn();break;end if (v627==(0 -0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\114\126\184\234\196\70","\165\40\17\212\158");v627=1 -0 ;end end break;end end else CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected=v7("\227\208\11\50\52\196\255\35","\70\133\185\104\83");CaveBot.setOn();end end);onTextMessage(function(v527,v528) local v529=0;while true do if (0==v529) then if  not v528:lower():find(v7("\2\76\74\43\197\13\95\75\63\137\23\80\69\106\221\5\86\79","\169\100\37\36\74")) then return;end CaveBot.gotoLabel(v7("\5\137\182\66\5\128\163\66","\48\96\231\194"));break;end end end);onTextMessage(function(v530,v531) local v532=773 -(48 + 725) ;local v533;while true do if (v532==0) then v533=0 -0 ;while true do if (0==v533) then if  not v531:lower():find("você terminou a task") then return;end CaveBot.gotoLabel(v7("\205\84\26\63\28\223\174\145","\227\168\58\110\77\121\184\207"));break;end end break;end end end);onTextMessage(function(v534,v535) local v536=0 -0 ;while true do if (v536==(0 + 0)) then if  not v19._storage.autoTask.enabled then return;end if  not v535:lower():find(v7("\111\57\178\80\190\155\117\164\59\47\170\65\241\207\112\182\112\124\185\65\188\218\49\177\126\46\178\73\191\212\100","\197\27\92\223\32\209\187\17")) then return;end v536=1;end if (v536==1) then CaveBot.gotoLabel(v7("\6\81\215\233\6\88\194\233","\155\99\63\163"));break;end end end);onTalk(function(v537,v538,v539,v540,v541,v542) local v543=0 -0 ;while true do if (v543==(1 + 0)) then CaveBot.setOff();return true;end if (0==v543) then if (v539~=(15 + 36)) then return;end if  not v540:lower():find(v7("\148\222\162\136\249\138\131\222\225\153\188\137\194\222\178\205\235\212\194\214\174\129\189\196\128\208\179","\228\226\177\193\237\217")) then return;end v543=1;end end end);onTalk(function(v544,v545,v546,v547,v548,v549) local v550=0;while true do local v569=853 -(152 + 701) ;local v570;while true do if (v569==(1311 -(430 + 881))) then v570=0;while true do if (v570==(0 + 0)) then if (v550==(895 -(557 + 338))) then if (v546~=(16 + 35)) then return;end if  not v547:lower():find(v7("\34\191\32\227\116\190\34\233\116\164\38\235\116\191\48\166\101\224\99\225\59\188\39\166\54\177\49","\134\84\208\67")) then return;end v550=2 -1 ;end if (v550==1) then CaveBot.setOff();return true;end break;end end break;end end end end);
+]], g_ui.getRootWidget())
+
+if not storage.endTime3 then
+    storage.endTime3 = 0
+end
+
+if not storage.endTime then
+    storage.endTime = 0
+end
+
+if not storage.endTime2 then
+    storage.endTime2 = 0
+end
+
+local function doFormatTime(v)
+    local hours = string.format("%02.f", math.floor(v / 3600))
+    local mins = string.format("%02.f", math.floor(v / 60 - (hours * 60)))
+    local seconds = string.format("%02.f", math.floor(math.fmod(v, 60)))
+    return hours .. ":" .. mins .. ":" .. seconds
+end
+
+tmrMacro = macro(1, function()
+    if os.time() >= storage.endTime then
+        widgetTC.lblTimer:setText('00:00:00')
+        return
+    end
+    widgetTC.lblTimer:setText(doFormatTime(os.difftime(storage.endTime, os.time())))
+end)
+
+tmrMacro2 = macro(1, function()
+       if os.time() >= storage.endTime and os.time() >= storage.endTime2 and os.time() < storage.endTime3 then
+        widgetTC2.lblTimer2:setText('00:00:00')
+		irTaksu()
+		tmrMacro2:setOff()
+
+
+        return
+    end
+     local remainingTime = os.difftime(storage.endTime2, os.time())
+    if remainingTime < 0 then
+        remainingTime = 0
+    end
+    widgetTC2.lblTimer2:setText(doFormatTime(remainingTime))
+
+end)
+
+tmrMacro3 = macro(1, function()
+    if os.time() >= storage.endTime3 then
+        widgetTC3.lblTimer3:setText('00:00:00')
+	
+		irZoltan()
+		tmrMacro3:setOff()
+
+        return
+    end
+	 local remainingTime2 = os.difftime(storage.endTime3, os.time())
+    if remainingTime2 < 0 then
+        remainingTime2 = 0
+    end
+      widgetTC3.lblTimer3:setText(doFormatTime(remainingTime2))
+end)
+
+if not contagem then
+    contagem = 0
+end
+
+if not contagemTaksu then
+    contagemTaksu = 0
+end
+
+if not famaentregue then
+    famaentregue = false
+end
+
+
+
+function irTaksu ()
+	if not  profile._storage.autoTaksu.enabled then return end
+	for _, spec in ipairs (getSpectators()) do
+		if spec:isCreature() and spec ~= player then
+			local specName = spec:getName():lower()
+			if specName == "trainer" then
+			TargetBot.setOff()
+			tyrBot.storage._configs.targetbot_configs.selected = 'others'
+			CaveBot.setOff()
+			FollowAttack.mainMacro.setOff()
+			tyrBot.storage._configs.cavebot_configs.selected = 'Voltarzoltan'
+			CaveBot.setOn()
+			end
+		end
+	end
+	end
+
+	function irZoltan ()
+	if not profile._storage.autoTask.enabled then return end
+	for _, spec in ipairs (getSpectators()) do
+		if spec:isCreature() and spec ~= player then
+			local specName = spec:getName():lower()
+			if specName == "trainer" then
+
+			TargetBot.setOff()
+			tyrBot.storage._configs.targetbot_configs.selected = 'others'
+			TargetBot.setOn()
+			CaveBot.setOff()
+			FollowAttack.mainMacro.setOff()
+			tyrBot.storage._configs.cavebot_configs.selected = 'trainerparaZoltan'
+			CaveBot.setOn()
+			end
+		end
+	end
+	end
+
+
+
+
+------------------------------------------------------------------------
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+    if (mode ~= 51) then return; end
+  if not profile._storage.autoTask.enabled then return end
+    if not text:lower():find('voce ativou a task de fama') then return; end
+	emFortress = false
+    storage.endTime = os.time() + 6 * 3600
+	storage.endTime3 = os.time() + 12 * 3600
+    tmrMacro:setOn()
+	tmrMacro3:setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+
+  if not text:lower():find('finalizou sua task de fama') then return; end
+  if not profile._storage.autoTask.enabled then return end
+  storage.endTime = os.time() + 6 * 0
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('sua task foi removida') then return; end
+  if not  profile._storage.autoTaksu.enabled then return end
+ storage.endTime2 = os.time() + 2 * 3600
+ contagemTaksu = 0
+tmrMacro2:setOn()
+  if not profile._storage.autoTask.enabled then return end
+CaveBot.setOff()
+	tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+	CaveBot.setOn()
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('aqui esta seu premio') then return; end
+  if not  profile._storage.autoTaksu.enabled then return end
+	contagemTaksu = 1
+	contagem = contagem + 1
+	storage.endTime2 = os.time() + 6 * 3600
+	tmrMacro2:setOn()
+	CaveBot.setOff()
+	tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+	CaveBot.setOn()
+return true;
+end)
+
+
+
+
+
+--------------------------------------------------------------------------
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  
+  if not text:lower():find('black shinobis') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Blackshinobis'
+  CaveBot.setOn()
+
+
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('akanames') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Akanamestaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('mamushis') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Mamushitaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('irankis') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Irankitaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('shinobi archers') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Shinobiarchers'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('kuroaris') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Kuroaris'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('nukenins') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Nukenin'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('venom snakes') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Venomsnake'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('tayuyas') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Tayuyas'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('dog fears') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Dogfears'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('konchus') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Konchu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('skeleton fears') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Skeletonfears'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('devils') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Devils'
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('akatsukis') then return; end
+  CaveBot.gotoLabel('desistir')
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('shinobi skyss') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Shinobiskyss'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('kimimaros') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Kimimaros'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('ultimate skeletons') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Ultimateskeletontaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('jiiroubous') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Jiiroubous'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('rounins') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Rounintaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('dark snakes') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Darksnakes'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('gedou skeletons') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Gedouskeletons'
+
+   return true;
+
+
+
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('yoth furies') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Yothfuries'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('konchu dokus') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Konchudokutaksu'
+  CaveBot.setOn()
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('ishikawas') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Ishkawataksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('renegades') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Renegade'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('supreme sands') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Supremesands'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('black deaths') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'blackDeathZoltan'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('tsuyoi kyojins') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Tsuyoikyojintaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('kikkais') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Kikkaitaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('venom scorpions') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Venomscorpiontaksu'
+  CaveBot.setOn()
+
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('araks') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Araktaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('scorpions') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Scorpiontaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('aracnideos') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Araktaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('wamus. termine') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Wamutaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:find('%d+ Dai Wamus') then return; end
+  CaveBot.setOff()
+  storage._configs.cavebot_configs.selected = 'Daiwamutaksu'
+  CaveBot.setOn()
+
+
+   return true;
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('vampires') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Vampiretaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('vampire mutateds') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Vampiramutatedtaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('ibukis') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Ibukitaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('hebi shiros') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Hebishirotaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+
+
+-----------------------------------------------------------
+
+
+
+
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura akaname') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Akamanezoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura akamanto') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Akamantozoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura araken') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Arakzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura arak') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Arakzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura bikkubado') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Bikkubadozoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura hebi shiro') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Hebishirozoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura heishi') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Heishizoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura ibuki') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Ibukizoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura iranki') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Irankizoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura jaakuna tako') then return; end
+            CaveBot.setOff()
+            tyrBot.storage._configs.cavebot_configs.selected = 'Jaakunatakozoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura keshin') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Keshinzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura mamushi') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Mamushizoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura miratsu') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Miratsuzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura ribaiasan') then return; end
+            CaveBot.setOff()
+            tyrBot.storage._configs.cavebot_configs.selected = 'Ribaiasanzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura scorpion') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Scorpionzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura senchou') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Senchouzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+  if not text:lower():find('voce ja realizou as tarefas de hoje de monstros') then return; end
+            CaveBot.setOff()
+
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura supreme sand') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Supremesandzoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura tsuyoi kyojin') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Tsuyoikyojinzoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura ultimate skeleton') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Ultimateskeletonzoltan'
+            CaveBot.setOn()
+end)
+
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura vampire') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Vampirezoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura vampire mutated') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Vampiremutedzoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura wamu') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Wamuzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura zyhan') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Zyhanzoltan'
+            CaveBot.setOn()
+end)
+
+
+
+
+
+
+
+-----------------------------------------------
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('apenas para quem completa uma task') then return; end
+      CaveBot.gotoLabel('byenpc')
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not profile._storage.autoTaksu.enabled then return end
+  if not text:lower():find('pode fazer tasks por pontos a cada 6 horas') then return; end
+  contagem = contagem + 1
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+  CaveBot.setOn()
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+    if not profile._storage.autoTaksu.enabled then return end
+  if not text:lower():find('voce esta com uma task ativada') then return; end
+      CaveBot.gotoLabel('ir')
+end)
+
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('desistiu de sua ultima task') then return; end
+  contagem = contagem + 1
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('apenas premium account') then return; end
+  CaveBot.setOff()
+   return true;
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('pode realizar apenas 3 tasks') then return; end
+ contagem = contagem + 1
+ CaveBot.setOff()
+       tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+	   CaveBot.setOn()
+   return true;
+end)
+
+
+-------------
+
+
+
+
+
+-------
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if mode ~= 51 then return end  -- Verifica o modo da mensagem
+  if not profile._storage.autoTask.enabled then return end
+
+  -- Procura pela frase específica com horas, minutos e segundos
+  if not (text:lower():find('deve esperar um intervalo de %d+ horas, %d+ minutos e %d+ segundos') or
+          text:lower():find('deve esperar um intervalo de %d+ minutos e %d+ segundos') or
+          text:lower():find('deve esperar um intervalo de %d+ segundos')) then
+      return
+  end
+
+  -- Captura horas, minutos e segundos da string, podendo estar ausentes
+  local hours, minutes, seconds = text:lower():match("(%d+) horas, (%d+) minutos e (%d+) segundos")
+  if not hours and not minutes then
+    minutes, seconds = text:lower():match("(%d+) minutos e (%d+) segundos")
+  end
+  if not minutes and not seconds then
+    seconds = text:lower():match("(%d+) segundos")
+  end
+
+  -- Inicializa valores como 0 se não forem encontrados
+  hours = tonumber(hours) or 0
+  minutes = tonumber(minutes) or 0
+  seconds = tonumber(seconds) or 0
+
+  -- Verifica se pelo menos um valor foi capturado corretamente
+  if hours >= 0 and minutes >= 0 and seconds >= 0 then
+    -- Converte o tempo total para segundos
+    local totalTime = (hours * 3600) + (minutes * 60) + seconds
+
+    -- Atualiza o timer com base no tempo capturado
+    storage.endTime3 = os.time() + totalTime
+
+    -- Ativa o timer
+    tmrMacro3:setOn()
+  end
+
+  -- Controle da lógica do CaveBot
+  contagem = contagem + 2  -- Incrementa a variável contagem
+
+  if profile._storage.autoChouji.enabled then
+    CaveBot.setOff()
+    delay(1500)  -- Aguarda 1,5 segundos
+     tyrBot.storage._configs.cavebot_configs.selected = 'Voltarzoltan'  -- Altera a configuração do CaveBot
+    CaveBot.setOn()
+  elseif contagem >= 3 then  -- Caso o valor da contagem seja 3 ou maior
+    CaveBot.setOff()
+     tyrBot.storage._configs.cavebot_configs.selected = 'treinarZoltan'  -- Altera a configuração para treinar
+    CaveBot.setOn()
+    contagem = 0  -- Reseta a variável contagem
+  end
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('voce ja realizou as tarefas de hoje de monstros') then return; end
+  contagem = contagem + 1
+   CaveBot.setOff()
+       tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+	   CaveBot.setOn()
+end)
+
+  onTalk(function(name, level, mode, text, channelId, pos)
+  if not isAutoChoujiEnabled() then return end
+    if mode ~= 51 then return end
+    if not text:lower():find('no momento você ja realizou 3 de caçar monstros no dia de hoje') then return end
+	 contagem = contagem + 1
+	 if profile._storage.autoTaksu.enabled then
+   CaveBot.setOff()
+       tyrBot.storage._configs.cavebot_configs.selected = 'checknpc'
+	   CaveBot.setOn()
+	   elseif profile._storage.autoTask.enabled then
+	   CaveBot.setOff()
+       tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+	   CaveBot.setOn() 
+	   else   
+	   CaveBot.setOff()
+       tyrBot.storage._configs.cavebot_configs.selected = 'ficarAFK'
+	   CaveBot.setOn()  end
+
+
+  end)
+
+
+
+
+onTextMessage(function(mode, text)
+  if not text:lower():find('finalizou sua task') then return; end
+      CaveBot.gotoLabel('entregar')
+end)
+
+
+onTextMessage(function(mode, text)
+  if not text:lower():find('você terminou a task') then return; end
+      CaveBot.gotoLabel('entregar')
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('tempo da sua task fama terminou') then return; end
+      CaveBot.gotoLabel('entregar')
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('voce nao tem os 20 gold bar') then return; end
+  CaveBot.setOff()
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('voce nao tem os 10 gold bar') then return; end
+  CaveBot.setOff()
+   return true;
+end)
+
+------------------
+-------------------
+
+
+local logoutDeaths = 1
+local logoutDeaths = 2
+local logoutDeaths = 3
+local logoutDeaths = 4
+local logoutDeaths = 5
+
+if type(storage["death"]) ~= "table" then storage["death"] = { count = 0 } end
+local deathCount = storage["death"].count
+UI.Separator()
+deathLabel = UI.Label("Death count: " .. deathCount)
+
+if deathCount >= 3 then
+
+CaveBot.setOff()
+
+storage._configs.cavebot_configs.selected = 'ficarAFK'
+CaveBot.setOn()
+
+end
+
+
+if deathCount >= 3 then
+  deathLabel:setColor("red")
+elseif deathCount >= 2 then
+  deathLabel:setColor("orange")
+else
+  deathLabel:setColor("green")
+end
+
+UI.Button("Reset Deaths", function()
+  storage["death"].count = 0
+  deathLabel:setText("Death count: " .. storage["death"].count)
+  deathLabel:setColor("green")
+end )
+
+xDeathCount = macro(1000, "Death Counter", function()
+
+for i, rootW in pairs(g_ui.getRootWidget():getChildren()) do
+  if rootW:getText() == "Você está morto" then
+    storage["death"].count = storage["death"].count + 1
+    deathLabel:setText("Death count: " .. storage["death"].count)
+CaveBot.setOff()
+tyrBot.storage._configs.cavebot_configs.selected = 'Iniciohospitalkonoha'
+CaveBot.setOn()
+modules.client_entergame.CharacterList.doLogin()
+
+    end
+  end
+end)
+
+UI.Separator()
+
+
