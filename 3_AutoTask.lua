@@ -1250,21 +1250,6 @@ UI.Button("Reset Deaths", function()
   deathLabel:setColor("green")
 end )
 
-xDeathCount = macro(1000, "Death Counter", function()
 
-for i, rootW in pairs(g_ui.getRootWidget():getChildren()) do
-  if rootW:getText() == "Você está morto" then
-    storage["death"].count = storage["death"].count + 1
-    deathLabel:setText("Death count: " .. storage["death"].count)
-CaveBot.setOff()
-tyrBot.storage._configs.cavebot_configs.selected = 'Iniciohospitalkonoha'
-CaveBot.setOn()
-modules.client_entergame.CharacterList.doLogin()
-
-    end
-  end
-end)
-
-UI.Separator()
 
 
