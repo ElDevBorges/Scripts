@@ -1,71 +1,8 @@
 
--- DiretÛrio principal para salvar as configuraÁıes
-local MAIN_DIRECTORY = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/" .. g_game.getWorldName() .. "/"
-local STORAGE_DIRECTORY = MAIN_DIRECTORY .. name() .. "_exitKamui.json"
 
--- Inicializa o perfil padr„o
-local profile = {
-    _storage = {
-        exitKamui = { enabled = false }
- 
-    }
-}
-
--- Cria o diretÛrio se n„o existir
-if not g_resources.directoryExists(MAIN_DIRECTORY) then
-    g_resources.makeDir(MAIN_DIRECTORY)
-end
-
--- FunÁ„o para carregar as configuraÁıes do JSON
-local function load_file()
-    if g_resources.fileExists(STORAGE_DIRECTORY) then
-        local content = g_resources.readFileContents(STORAGE_DIRECTORY)
-        local status, result = pcall(json.decode, content)
-        if status and result and result._storage then
-            profile._storage = result._storage
-            warn("ConfiguraÁıes carregadas com sucesso!")
-        else
-            warn("Erro ao carregar as configuraÁıes.")
-        end
-    else
-        warn("Arquivo de configuraÁıes n„o encontrado. Usando configuraÁıes padr„o.")
-    end
-end
-
--- FunÁ„o para salvar as configuraÁıes no JSON
-local function save_file()
-    local res = json.encode(profile, 4)
-    local status, err = pcall(function() g_resources.writeFileContents(STORAGE_DIRECTORY, res) end)
-    if not status then
-        warn("Erro ao salvar as configuraÁıes: " .. err)
-    else
-        warn("ConfiguraÁıes salvas com sucesso!")
-    end
-end
-
-
--- Carrega as configuraÁıes ao iniciar o bot
-load_file()
-
--- ConfiguraÁ„o do checkbox AutoTask
-local checkBoxExitKamui = setupUI([[
+bit32={};local v0=78 -46 ;local v1=2^v0 ;bit32.bnot=function(v16) local v17=0 + 0 ;while true do if (v17==(0 -0)) then v16=v16%v1 ;return (v1-(953 -(802 + 150))) -v16 ;end end end;bit32.band=function(v18,v19) local v20=0 -0 ;local v21;local v22;while true do if (v20==(0 -0)) then if (v19==(186 + 69)) then return v18%256 ;end if (v19==65535) then return v18%(66533 -(915 + 82)) ;end v20=2 -1 ;end if (v20==(2 + 1)) then for v59=1 -0 ,v0 do local v60,v61=v18%(1189 -(1069 + 118)) ,v19%2 ;v18,v19=math.floor(v18/2 ),math.floor(v19/(4 -2) );if ((v60 + v61)==(3 -1)) then v21=v21 + v22 ;end v22=(1 + 1) * v22 ;end return v21;end if (v20==(3 -1)) then v21=0 + 0 ;v22=792 -(368 + 423) ;v20=9 -6 ;end if (v20==(19 -(10 + 8))) then if (v19==(4228031607 -  -66935688)) then return v18%4294967296 ;end v18,v19=v18%v1 ,v19%v1 ;v20=2;end end end;bit32.bor=function(v23,v24) local v25=442 -(416 + 26) ;local v26;local v27;while true do if (v25==(9 -6)) then for v62=1 + 0 ,v0 do local v63=0;local v64;local v65;while true do if (v63==(1 -0)) then if ((v64 + v65)>=(439 -(145 + 293))) then v26=v26 + v27 ;end v27=(432 -(44 + 386)) * v27 ;break;end if (v63==(1486 -(998 + 488))) then v64,v65=v23%(1 + 1) ,v24%(2 + 0) ;v23,v24=math.floor(v23/(774 -(201 + 571)) ),math.floor(v24/2 );v63=1139 -(116 + 1022) ;end end end return v26;end if (v25==2) then v26=0 -0 ;v27=1 + 0 ;v25=3;end if (v25==(0 -0)) then if (v24==(905 -650)) then return (v23-(v23%256)) + 255 ;end if (v24==(66394 -(814 + 45))) then return (v23-(v23%(161478 -95942))) + 3532 + 62003 ;end v25=1 + 0 ;end if (v25==1) then if (v24==4294967295) then return 4294968180 -(261 + 624) ;end v23,v24=v23%v1 ,v24%v1 ;v25=3 -1 ;end end end;bit32.bxor=function(v28,v29) v28,v29=v28%v1 ,v29%v1 ;local v30=0;local v31=1081 -(1020 + 60) ;for v51=1424 -(630 + 793) ,v0 do local v52=0 -0 ;local v53;local v54;while true do if (v52==(0 -0)) then v53,v54=v28%(1 + 1) ,v29%(6 -4) ;v28,v29=math.floor(v28/(1749 -(760 + 987)) ),math.floor(v29/(1915 -(1789 + 124)) );v52=1;end if (v52==1) then if ((v53 + v54)==(767 -(745 + 21))) then v30=v30 + v31 ;end v31=2 * v31 ;break;end end end return v30;end;bit32.lshift=function(v32,v33) local v34=0 + 0 ;while true do if (v34==(2 -1)) then if (v33<0) then return math.floor(v32 * ((7 -5)^v33) );else return (v32 * (2^v33))%v1 ;end break;end if ((0 + 0)==v34) then if (math.abs(v33)>=v0) then return 0 + 0 ;end v32=v32%v1 ;v34=1;end end end;bit32.rshift=function(v35,v36) local v37=0;while true do if ((1056 -(87 + 968))==v37) then if (v36>0) then return math.floor(v35 * ((8 -6)^ -v36) );else return (v35 * ((2 + 0)^ -v36))%v1 ;end break;end if (v37==(0 -0)) then if (math.abs(v36)>=v0) then return 1413 -(447 + 966) ;end v35=v35%v1 ;v37=2 -1 ;end end end;bit32.arshift=function(v38,v39) local v40=0;while true do if (v40==(1817 -(1703 + 114))) then if (math.abs(v39)>=v0) then return 0;end v38=v38%v1 ;v40=702 -(376 + 325) ;end if (v40==(1 -0)) then if (v39>0) then local v67=0;if (v38>=(v1/(5 -3))) then v67=v1-((1 + 1)^(v0-v39)) ;end return math.floor(v38 * ((4 -2)^ -v39) ) + v67 ;else return (v38 * ((16 -(9 + 5))^ -v39))%v1 ;end break;end end end;local v9="/bot/"   .. modules.game_bot.contentsPanel.config:getCurrentOption().text   .. "/storage/"   .. g_game.getWorldName()   .. "/" ;local v10=v9   .. name()   .. "_exitKamui.json" ;local v11={_storage={exitKamui={enabled=false}}};if  not g_resources.directoryExists(v9) then g_resources.makeDir(v9);end local function v12() if g_resources.fileExists(v10) then local v55=g_resources.readFileContents(v10);local v56,v57=pcall(json.decode,v55);if (v56 and v57 and v57._storage) then local v66=0;while true do if (v66==(376 -(85 + 291))) then v11._storage=v57._storage;warn("Configura√ß√µes carregadas com sucesso!");break;end end else warn("Erro ao carregar as configura√ß√µes.");end else warn("Arquivo de configura√ß√µes n√£o encontrado. Usando configura√ß√µes padr√£o.");end end local function v13() local v41=0;local v42;local v43;local v44;while true do if (v41==(1266 -(243 + 1022))) then if  not v43 then warn("Erro ao salvar as configura√ß√µes: "   .. v44 );else warn("Configura√ß√µes salvas com sucesso!");end break;end if (v41==(0 -0)) then v42=json.encode(v11,4 + 0 );v43,v44=pcall(function() g_resources.writeFileContents(v10,v42);end);v41=1181 -(1123 + 57) ;end end end v12();local v14=setupUI([[
 CheckBox
   id: checkBox
   font: cipsoftFont
   text: Exit Kamui
-]])
-
-
-checkBoxExitKamui.onCheckChange = function(widget, checked)
-    profile._storage.exitKamui.enabled = checked
-    save_file() -- Salva imediatamente apÛs a mudanÁa
-end
-
-checkBoxExitKamui:setChecked(profile._storage.exitKamui.enabled)
-
-onTextMessage(function(mode, text)
-  if not text:lower():find('voce esta no mundo do kamui') then return; end
-	if profile._storage.exitKamui.enabled then
-      CaveBot.gotoLabel('sairKamui')
-      end
-end)
+]]);v14.onCheckChange=function(v45,v46) local v47=0 + 0 ;while true do if (v47==(254 -(163 + 91))) then v11._storage.exitKamui.enabled=v46;v13();break;end end end;v14:setChecked(v11._storage.exitKamui.enabled);onTextMessage(function(v48,v49) local v50=0;while true do if (v50==0) then if  not v49:lower():find("voce esta no mundo do kamui") then return;end if v11._storage.exitKamui.enabled then CaveBot.gotoLabel("sairKamui");end break;end end end);
