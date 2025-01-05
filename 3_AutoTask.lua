@@ -84,11 +84,7 @@ local function sendToDiscord(characterName)
     -- Enviar os dados para o Discord usando 'modules.corelib.HTTP.post'
     modules.corelib.HTTP.post(url, jsonData, function(response, code)
         -- Verificar o código de resposta HTTP
-        if code == 200 then
-           
-        else
-       
-        end
+
         
         -- Logando a resposta completa (se houver) para depuração
    
