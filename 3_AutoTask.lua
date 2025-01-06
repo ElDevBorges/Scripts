@@ -1,66 +1,4 @@
-
-
-bit32={};local v0=32;local v1=2^v0 ;bit32.bnot=function(v24) local v25=1288 -(993 + 295) ;while true do if (v25==0) then v24=v24%v1 ;return (v1-(1 + 0)) -v24 ;end end end;bit32.band=function(v26,v27) local v28=0;local v29;local v30;while true do if (v28==2) then v29=1171 -(418 + 753) ;v30=1 + 0 ;v28=1 + 2 ;end if (v28==(1 + 0)) then if (v27==(4294967295 -0)) then return v26%4294967296 ;end v26,v27=v26%v1 ,v27%v1 ;v28=2;end if (v28==(1772 -(1749 + 20))) then for v587=1 + 0 ,v0 do local v588,v589=v26%(1324 -(1249 + 73)) ,v27%(1 + 1) ;v26,v27=math.floor(v26/(1147 -(466 + 679)) ),math.floor(v27/2 );if ((v588 + v589)==2) then v29=v29 + v30 ;end v30=(4 -2) * v30 ;end return v29;end if (v28==(0 -0)) then if (v27==(2155 -(106 + 1794))) then return v26%(81 + 175) ;end if (v27==(16566 + 48969)) then return v26%(193488 -127952) ;end v28=2 -1 ;end end end;bit32.bor=function(v31,v32) local v33=114 -(4 + 110) ;local v34;local v35;while true do if (v33==(584 -(57 + 527))) then if (v32==255) then return (v31-(v31%(1683 -(41 + 1386)))) + (358 -(17 + 86)) ;end if (v32==65535) then return (v31-(v31%(44480 + 21056))) + (146150 -80615) ;end v33=1;end if (v33==(8 -5)) then for v590=167 -(122 + 44) ,v0 do local v591=0 -0 ;local v592;local v593;while true do if (0==v591) then v592,v593=v31%2 ,v32%(6 -4) ;v31,v32=math.floor(v31/2 ),math.floor(v32/2 );v591=1;end if (v591==(1 + 0)) then if ((v592 + v593)>=(1 + 0)) then v34=v34 + v35 ;end v35=(3 -1) * v35 ;break;end end end return v34;end if (v33==1) then if (v32==(4294967360 -(30 + 35))) then return 4294967923 -(395 + 233) ;end v31,v32=v31%v1 ,v32%v1 ;v33=5 -3 ;end if (v33==2) then v34=0;v35=1 -0 ;v33=3;end end end;bit32.bxor=function(v36,v37) local v38=0 -0 ;local v39;local v40;while true do if (2==v38) then return v39;end if (1==v38) then v40=581 -(361 + 219) ;for v594=321 -(53 + 267) ,v0 do local v595=0 + 0 ;local v596;local v597;while true do if ((414 -(15 + 398))==v595) then if ((v596 + v597)==(983 -(18 + 964))) then v39=v39 + v40 ;end v40=(7 -5) * v40 ;break;end if (v595==(0 + 0)) then v596,v597=v36%(2 + 0) ,v37%2 ;v36,v37=math.floor(v36/(852 -(20 + 830)) ),math.floor(v37/(2 + 0) );v595=127 -(116 + 10) ;end end end v38=1 + 1 ;end if (v38==(738 -(542 + 196))) then v36,v37=v36%v1 ,v37%v1 ;v39=0 -0 ;v38=1;end end end;bit32.lshift=function(v41,v42) if (math.abs(v42)>=v0) then return 0 + 0 ;end v41=v41%v1 ;if (v42<(0 + 0)) then return math.floor(v41 * ((1 + 1)^v42) );else return (v41 * ((4 -2)^v42))%v1 ;end end;bit32.rshift=function(v43,v44) local v45=0 -0 ;while true do if (v45==1) then if (v44>(1551 -(1126 + 425))) then return math.floor(v43 * ((407 -(118 + 287))^ -v44) );else return (v43 * ((7 -5)^ -v44))%v1 ;end break;end if (v45==(1121 -(118 + 1003))) then if (math.abs(v44)>=v0) then return 0 -0 ;end v43=v43%v1 ;v45=378 -(142 + 235) ;end end end;bit32.arshift=function(v46,v47) if (math.abs(v47)>=v0) then return 0;end v46=v46%v1 ;if (v47>(0 -0)) then local v539=0 + 0 ;if (v46>=(v1/(979 -(553 + 424)))) then v539=v1-(2^(v0-v47)) ;end return math.floor(v46 * ((3 -1)^ -v47) ) + v539 ;else return (v46 * ((2 + 0)^ -v47))%v1 ;end end;setDefaultTab("scripts");local v9="/bot/"   .. modules.game_bot.contentsPanel.config:getCurrentOption().text   .. "/storage/"   .. g_game.getWorldName()   .. "/" ;local v10=v9   .. name()   .. "_config.json" ;local v11={_storage={autoTask={enabled=false},autoTaksu={enabled=false},autoChouji={enabled=false}}};if  not g_resources.directoryExists(v9) then g_resources.makeDir(v9);end local function v12() if g_resources.fileExists(v10) then local v540=g_resources.readFileContents(v10);local v541,v542=pcall(json.decode,v540);if (v541 and v542 and v542._storage) then v11._storage=v542._storage;warn("Configurações carregadas com sucesso!");else warn("Erro ao carregar as configurações.");end else warn("Arquivo de configurações não encontrado. Usando configurações padrão.");end end local function v13() local v48=json.encode(v11,4 + 0 );local v49,v50=pcall(function() g_resources.writeFileContents(v10,v48);end);if  not v49 then warn("Erro ao salvar as configurações: "   .. v50 );else warn("Configurações salvas com sucesso!");end end v12();local v14=setupUI([[
-CheckBox
-  id: checkBox
-  font: cipsoftFont
-  text: AutoTask
-]]);v14.onCheckChange=function(v51,v52) local v53=0 + 0 ;while true do if (v53==0) then v11._storage.autoTask.enabled=v52;v13();break;end end end;v14:setChecked(v11._storage.autoTask.enabled);local v16=setupUI([[
-CheckBox
-  id: checkBox
-  font: cipsoftFont
-  text: Taksu
-]]);v16.onCheckChange=function(v54,v55) v11._storage.autoTaksu.enabled=v55;v13();end;v16:setChecked(v11._storage.autoTaksu.enabled);local v18=setupUI([[
-CheckBox
-  id: checkBox
-  font: cipsoftFont
-  text: Chouji
-]]);v18.onCheckChange=function(v57,v58) v11._storage.autoChouji.enabled=v58;v13();end;v18:setChecked(v11._storage.autoChouji.enabled);function isAutoTaskEnabled() return v11._storage.autoTask.enabled;end function isAutoTaksuEnabled() return v11._storage.autoTaksu.enabled;end function isAutoChoujiEnabled() return v11._storage.autoChouji.enabled;end treinoo=macro(43 + 57 ,"treinar",function() if (manapercent()>=(29 + 21)) then say("powerdown");end end);local v20=setupUI([[
-Panel
-  size: 500 750
-  anchors.bottom: parent.bottom
-  anchors.left: parent.left
-  Label
-    id: lblTimer
-    color: green
-    font: verdana-11px-rounded
-    height: 12
-    background-color: #00000040
-    opacity: 0.87
-    text-auto-resize: true
-    !text: tr('00:00:00')
-]],g_ui.getRootWidget());local v21=setupUI([[
-Panel
-  size: 500 750
-  anchors.bottom: parent.bottom
-  anchors.right: parent.right
-  Label
-    id: lblTimer2
-    color: blue
-    font: verdana-11px-rounded
-    height: 12
-    background-color: #00000040
-    opacity: 0.87
-    text-auto-resize: true
-    !text: tr('00:00:00')
-]],g_ui.getRootWidget());local v22=setupUI([[
-Panel
-  size: 500 750
-  pos: 500 0
-  margin-bottom: 20
-  Label
-    id: lblTimer3
-    color: yellow
-    font: verdana-11px-rounded
-    height: 12
-    background-color: #00000040
-    opacity: 0.87
-    text-auto-resize: true
-    !text: tr('00:00:00')
-]],g_ui.getRootWidget());if  not storage.endTime3 then storage.endTime3=0;end if  not storage.endTime then storage.endTime=0;end if  not storage.endTime2 then storage.endTime2=0;end local function v23(v60) local v61=0 -0 ;local v62;local v63;local v64;while true do if (v61==(0 -0)) then v62=string.format("%02.f",math.floor(v60/3600 ));v63=string.format("%02.f",math.floor((v60/60) -(v62 * (134 -74)) ));v61=1 + 0 ;end if (v61==(4 -3)) then v64=string.format("%02.f",math.floor(math.fmod(v60,813 -(239 + 514) )));return v62   .. ":"   .. v63   .. ":"   .. v64 ;end end end tmrMacro=macro(1,function() local v65=0 + 0 ;while true do if (v65==(1329 -(797 + 532))) then if (os.time()>=storage.endTime) then local v601=0 + 0 ;while true do if (v601==0) then v20.lblTimer:setText("00:00:00");return;end end end v20.lblTimer:setText(v23(os.difftime(storage.endTime,os.time())));break;end end end);tmrMacro2=macro(1,function() local v66=0 + 0 ;local v67;while true do if (v66==(2 -1)) then if (v67<0) then v67=1202 -(373 + 829) ;end v21.lblTimer2:setText(v23(v67));break;end if (v66==(731 -(476 + 255))) then if ((os.time()>=storage.endTime) and (os.time()>=storage.endTime2) and (os.time()<storage.endTime3)) then v21.lblTimer2:setText("00:00:00");irTaksu();tmrMacro2:setOff();return;end v67=os.difftime(storage.endTime2,os.time());v66=1;end end end);tmrMacro3=macro(1131 -(369 + 761) ,function() if (os.time()>=storage.endTime3) then v22.lblTimer3:setText("00:00:00");irZoltan();tmrMacro3:setOff();return;end local v68=os.difftime(storage.endTime3,os.time());if (v68<0) then v68=0 + 0 ;end v22.lblTimer3:setText(v23(v68));end);if  not contagem then contagem=0 -0 ;end if  not contagemTaksu then contagemTaksu=0 -0 ;end if  not famaentregue then famaentregue=false;end function irTaksu() if  not v11._storage.autoTaksu.enabled then return;end for v535,v536 in ipairs(getSpectators()) do if (v536:isCreature() and (v536~=player)) then local v547=0;local v548;while true do if (0==v547) then v548=v536:getName():lower();if (v548=="trainer") then TargetBot.setOff();tyrBot.storage._configs.targetbot_configs.selected="others";CaveBot.setOff();FollowAttack.mainMacro.setOff();tyrBot.storage._configs.cavebot_configs.selected="Voltarzoltan";CaveBot.setOn();end break;end end end end end function irZoltan() if  not v11._storage.autoTask.enabled then return;end for v537,v538 in ipairs(getSpectators()) do if (v538:isCreature() and (v538~=player)) then local v549=v538:getName():lower();if (v549=="trainer") then local v602=238 -(64 + 174) ;while true do if (v602==(1 + 1)) then FollowAttack.mainMacro.setOff();tyrBot.storage._configs.cavebot_configs.selected="trainerparaZoltan";v602=3 -0 ;end if (v602==(337 -(144 + 192))) then TargetBot.setOn();CaveBot.setOff();v602=218 -(42 + 174) ;end if ((0 + 0)==v602) then TargetBot.setOff();tyrBot.storage._configs.targetbot_configs.selected="others";v602=1;end if (v602==3) then CaveBot.setOn();break;end end end end end end onTalk(function(v69,v70,v71,v72,v73,v74) if (v71~=51) then return;end if  not v11._storage.autoTask.enabled then return;end if  not v72:lower():find("voce ativou a task de fama") then return;end emFortress=false;storage.endTime=os.time() + (6 * (2983 + 617)) ;storage.endTime3=os.time() + (12 * (1530 + 2070)) ;tmrMacro:setOn();tmrMacro3:setOn();end);onTextMessage(function(v77,v78) local v79=1504 -(363 + 1141) ;while true do if (1==v79) then storage.endTime=os.time() + ((1586 -(1183 + 397)) * 0) ;break;end if (v79==0) then if  not v78:lower():find("finalizou sua task de fama") then return;end if  not v11._storage.autoTask.enabled then return;end v79=2 -1 ;end end end);onTalk(function(v80,v81,v82,v83,v84,v85) if (v82~=(38 + 13)) then return;end if  not v83:lower():find("sua task foi removida") then return;end if  not v11._storage.autoTaksu.enabled then return;end storage.endTime2=os.time() + ((2 + 0) * (5575 -(1913 + 62))) ;contagemTaksu=0 + 0 ;tmrMacro2:setOn();if  not v11._storage.autoTask.enabled then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Zoltan";CaveBot.setOn();return true;end);onTalk(function(v88,v89,v90,v91,v92,v93) local v94=0 -0 ;while true do if (v94==(1935 -(565 + 1368))) then tmrMacro2:setOn();CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Zoltan";v94=11 -8 ;end if (v94==(1661 -(1477 + 184))) then if (v90~=(69 -18)) then return;end if  not v91:lower():find("aqui esta seu premio") then return;end if  not v11._storage.autoTaksu.enabled then return;end v94=1 + 0 ;end if ((857 -(564 + 292))==v94) then contagemTaksu=1 -0 ;contagem=contagem + (2 -1) ;storage.endTime2=os.time() + ((310 -(244 + 60)) * (2769 + 831)) ;v94=478 -(41 + 435) ;end if (v94==3) then CaveBot.setOn();return true;end end end);onTalk(function(v95,v96,v97,v98,v99,v100) if  not v11._storage.autoTaksu.enabled then return;end if (v97~=(1052 -(938 + 63))) then return;end if  not v98:lower():find("black shinobis") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Blackshinobis";CaveBot.setOn();return true;end);onTalk(function(v102,v103,v104,v105,v106,v107) local v108=0 + 0 ;while true do if (v108==(1126 -(936 + 189))) then if  not v105:lower():find("akanames") then return;end CaveBot.setOff();v108=1 + 1 ;end if (v108==(1616 -(1565 + 48))) then return true;end if (v108==(0 + 0)) then if  not v11._storage.autoTaksu.enabled then return;end if (v104~=(1189 -(782 + 356))) then return;end v108=268 -(176 + 91) ;end if (v108==(4 -2)) then tyrBot.storage._configs.cavebot_configs.selected="Akanamestaksu";CaveBot.setOn();v108=3;end end end);onTalk(function(v109,v110,v111,v112,v113,v114) if  not v11._storage.autoTaksu.enabled then return;end if (v111~=51) then return;end if  not v112:lower():find("mamushis") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Mamushitaksu";CaveBot.setOn();return true;end);onTalk(function(v116,v117,v118,v119,v120,v121) local v122=0 -0 ;while true do if (v122==(1092 -(975 + 117))) then if  not v11._storage.autoTaksu.enabled then return;end if (v118~=51) then return;end v122=1876 -(157 + 1718) ;end if (2==v122) then tyrBot.storage._configs.cavebot_configs.selected="Irankitaksu";CaveBot.setOn();v122=3 + 0 ;end if (v122==(3 -2)) then if  not v119:lower():find("irankis") then return;end CaveBot.setOff();v122=6 -4 ;end if ((1021 -(697 + 321))==v122) then return true;end end end);onTalk(function(v123,v124,v125,v126,v127,v128) local v129=0 -0 ;while true do if (v129==(5 -2)) then return true;end if ((0 -0)==v129) then if  not v11._storage.autoTaksu.enabled then return;end if (v125~=(20 + 31)) then return;end v129=1;end if (v129==(1 -0)) then if  not v126:lower():find("shinobi archers") then return;end CaveBot.setOff();v129=5 -3 ;end if (v129==(1229 -(322 + 905))) then tyrBot.storage._configs.cavebot_configs.selected="Shinobiarchers";CaveBot.setOn();v129=3;end end end);onTalk(function(v130,v131,v132,v133,v134,v135) local v136=611 -(602 + 9) ;while true do if (v136==(1192 -(449 + 740))) then return true;end if (v136==(872 -(826 + 46))) then if  not v11._storage.autoTaksu.enabled then return;end if (v132~=(998 -(245 + 702))) then return;end v136=3 -2 ;end if (v136==1) then if  not v133:lower():find("kuroaris") then return;end CaveBot.setOff();v136=1 + 1 ;end if (v136==(1900 -(260 + 1638))) then tyrBot.storage._configs.cavebot_configs.selected="Kuroaris";CaveBot.setOn();v136=443 -(382 + 58) ;end end end);onTalk(function(v137,v138,v139,v140,v141,v142) if  not v11._storage.autoTaksu.enabled then return;end if (v139~=(163 -112)) then return;end if  not v140:lower():find("nukenins") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Nukenin";CaveBot.setOn();return true;end);onTalk(function(v144,v145,v146,v147,v148,v149) if  not v11._storage.autoTaksu.enabled then return;end if (v146~=(43 + 8)) then return;end if  not v147:lower():find("venom snakes") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Venomsnake";CaveBot.setOn();return true;end);onTalk(function(v151,v152,v153,v154,v155,v156) if  not v11._storage.autoTaksu.enabled then return;end if (v153~=(105 -54)) then return;end if  not v154:lower():find("tayuyas") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Tayuyas";CaveBot.setOn();return true;end);onTalk(function(v158,v159,v160,v161,v162,v163) local v164=0;while true do if (v164==(0 -0)) then if  not v11._storage.autoTaksu.enabled then return;end if (v160~=51) then return;end v164=1;end if (v164==3) then return true;end if (v164==(1206 -(902 + 303))) then if  not v161:lower():find("dog fears") then return;end CaveBot.setOff();v164=2;end if ((3 -1)==v164) then tyrBot.storage._configs.cavebot_configs.selected="Dogfears";CaveBot.setOn();v164=6 -3 ;end end end);onTalk(function(v165,v166,v167,v168,v169,v170) local v171=0 + 0 ;while true do if (v171==3) then return true;end if (v171==1) then if  not v168:lower():find("konchus") then return;end CaveBot.setOff();v171=2;end if (v171==0) then if  not v11._storage.autoTaksu.enabled then return;end if (v167~=(1741 -(1121 + 569))) then return;end v171=215 -(22 + 192) ;end if (v171==(685 -(483 + 200))) then tyrBot.storage._configs.cavebot_configs.selected="Konchu";CaveBot.setOn();v171=1466 -(1404 + 59) ;end end end);onTalk(function(v172,v173,v174,v175,v176,v177) local v178=0 -0 ;while true do if (v178==(1 -0)) then if  not v175:lower():find("skeleton fears") then return;end CaveBot.setOff();v178=2;end if (v178==(767 -(468 + 297))) then tyrBot.storage._configs.cavebot_configs.selected="Skeletonfears";CaveBot.setOn();v178=3;end if (v178==(565 -(334 + 228))) then return true;end if (v178==(0 -0)) then if  not v11._storage.autoTaksu.enabled then return;end if (v174~=51) then return;end v178=1;end end end);onTalk(function(v179,v180,v181,v182,v183,v184) if  not v11._storage.autoTaksu.enabled then return;end if (v181~=(117 -66)) then return;end if  not v182:lower():find("devils") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Devils";return true;end);onTalk(function(v186,v187,v188,v189,v190,v191) if  not v11._storage.autoTaksu.enabled then return;end if (v188~=(92 -41)) then return;end if  not v189:lower():find("akatsukis") then return;end CaveBot.gotoLabel("desistir");end);onTalk(function(v192,v193,v194,v195,v196,v197) local v198=0 + 0 ;while true do if (v198==(236 -(141 + 95))) then if  not v11._storage.autoTaksu.enabled then return;end if (v194~=(51 + 0)) then return;end v198=2 -1 ;end if (v198==(2 -1)) then if  not v195:lower():find("shinobi skyss") then return;end CaveBot.setOff();v198=2;end if (v198==(1 + 1)) then tyrBot.storage._configs.cavebot_configs.selected="Shinobiskyss";CaveBot.setOn();v198=3;end if ((8 -5)==v198) then return true;end end end);onTalk(function(v199,v200,v201,v202,v203,v204) if  not v11._storage.autoTaksu.enabled then return;end if (v201~=(36 + 15)) then return;end if  not v202:lower():find("kimimaros") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Kimimaros";CaveBot.setOn();return true;end);onTalk(function(v206,v207,v208,v209,v210,v211) if  not v11._storage.autoTaksu.enabled then return;end if (v208~=51) then return;end if  not v209:lower():find("ultimate skeletons") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Ultimateskeletontaksu";CaveBot.setOn();return true;end);onTalk(function(v213,v214,v215,v216,v217,v218) local v219=0 + 0 ;while true do if (v219==(1 -0)) then if  not v216:lower():find("jiiroubous") then return;end CaveBot.setOff();v219=2 + 0 ;end if (v219==(163 -(92 + 71))) then if  not v11._storage.autoTaksu.enabled then return;end if (v215~=51) then return;end v219=1;end if ((1 + 1)==v219) then tyrBot.storage._configs.cavebot_configs.selected="Jiiroubous";CaveBot.setOn();v219=4 -1 ;end if (v219==(768 -(574 + 191))) then return true;end end end);onTalk(function(v220,v221,v222,v223,v224,v225) if  not v11._storage.autoTaksu.enabled then return;end if (v222~=(43 + 8)) then return;end if  not v223:lower():find("rounins") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Rounintaksu";CaveBot.setOn();return true;end);onTalk(function(v227,v228,v229,v230,v231,v232) local v233=0 -0 ;while true do if (3==v233) then return true;end if (v233==1) then if  not v230:lower():find("dark snakes") then return;end CaveBot.setOff();v233=2;end if (v233==2) then tyrBot.storage._configs.cavebot_configs.selected="Darksnakes";CaveBot.setOn();v233=2 + 1 ;end if (v233==(849 -(254 + 595))) then if  not v11._storage.autoTaksu.enabled then return;end if (v229~=(177 -(55 + 71))) then return;end v233=1;end end end);onTalk(function(v234,v235,v236,v237,v238,v239) local v240=0;while true do if (v240==(0 -0)) then if  not v11._storage.autoTaksu.enabled then return;end if (v236~=(1841 -(573 + 1217))) then return;end v240=2 -1 ;end if ((1 + 0)==v240) then if  not v237:lower():find("gedou skeletons") then return;end CaveBot.setOff();v240=2 -0 ;end if (v240==(941 -(714 + 225))) then tyrBot.storage._configs.cavebot_configs.selected="Gedouskeletons";return true;end end end);onTalk(function(v241,v242,v243,v244,v245,v246) local v247=0;while true do if (v247==(5 -3)) then tyrBot.storage._configs.cavebot_configs.selected="Yothfuries";CaveBot.setOn();v247=3 -0 ;end if (v247==(1 + 2)) then return true;end if (v247==0) then if  not v11._storage.autoTaksu.enabled then return;end if (v243~=51) then return;end v247=1;end if (v247==(1 -0)) then if  not v244:lower():find("yoth furies") then return;end CaveBot.setOff();v247=808 -(118 + 688) ;end end end);onTalk(function(v248,v249,v250,v251,v252,v253) if  not v11._storage.autoTaksu.enabled then return;end if (v250~=(99 -(25 + 23))) then return;end if  not v251:lower():find("konchu dokus") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Konchudokutaksu";CaveBot.setOn();return true;end);onTalk(function(v255,v256,v257,v258,v259,v260) local v261=0 + 0 ;while true do if (v261==0) then if  not v11._storage.autoTaksu.enabled then return;end if (v257~=51) then return;end v261=1887 -(927 + 959) ;end if (v261==2) then tyrBot.storage._configs.cavebot_configs.selected="Ishkawataksu";CaveBot.setOn();v261=3;end if (v261==(3 -2)) then if  not v258:lower():find("ishikawas") then return;end CaveBot.setOff();v261=734 -(16 + 716) ;end if (3==v261) then return true;end end end);onTalk(function(v262,v263,v264,v265,v266,v267) local v268=0 -0 ;while true do if (v268==(98 -(11 + 86))) then if  not v265:lower():find("renegades") then return;end CaveBot.setOff();v268=4 -2 ;end if (v268==(287 -(175 + 110))) then tyrBot.storage._configs.cavebot_configs.selected="Renegade";CaveBot.setOn();v268=3;end if (v268==(6 -3)) then return true;end if (0==v268) then if  not v11._storage.autoTaksu.enabled then return;end if (v264~=51) then return;end v268=4 -3 ;end end end);onTalk(function(v269,v270,v271,v272,v273,v274) if  not v11._storage.autoTaksu.enabled then return;end if (v271~=(1847 -(503 + 1293))) then return;end if  not v272:lower():find("supreme sands") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Supremesands";CaveBot.setOn();return true;end);onTalk(function(v276,v277,v278,v279,v280,v281) if  not v11._storage.autoTaksu.enabled then return;end if (v278~=51) then return;end if  not v279:lower():find("black deaths") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="blackDeathZoltan";CaveBot.setOn();return true;end);onTalk(function(v283,v284,v285,v286,v287,v288) local v289=0 -0 ;while true do if (v289==(1 + 0)) then if  not v286:lower():find("tsuyoi kyojins") then return;end CaveBot.setOff();v289=2;end if (v289==(1061 -(810 + 251))) then if  not v11._storage.autoTaksu.enabled then return;end if (v285~=51) then return;end v289=1 + 0 ;end if (v289==(1 + 2)) then return true;end if (v289==2) then tyrBot.storage._configs.cavebot_configs.selected="Tsuyoikyojintaksu";CaveBot.setOn();v289=3 + 0 ;end end end);onTalk(function(v290,v291,v292,v293,v294,v295) if  not v11._storage.autoTaksu.enabled then return;end if (v292~=51) then return;end if  not v293:lower():find("kikkais") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Kikkaitaksu";CaveBot.setOn();return true;end);onTalk(function(v297,v298,v299,v300,v301,v302) if  not v11._storage.autoTaksu.enabled then return;end if (v299~=(584 -(43 + 490))) then return;end if  not v300:lower():find("venom scorpions") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Venomscorpiontaksu";CaveBot.setOn();return true;end);onTalk(function(v304,v305,v306,v307,v308,v309) if  not v11._storage.autoTaksu.enabled then return;end if (v306~=(784 -(711 + 22))) then return;end if  not v307:lower():find("araks") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Araktaksu";CaveBot.setOn();return true;end);onTalk(function(v311,v312,v313,v314,v315,v316) if  not v11._storage.autoTaksu.enabled then return;end if (v313~=(197 -146)) then return;end if  not v314:lower():find("%d+ scorpions. termine") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Scorpiontaksu";CaveBot.setOn();return true;end);onTalk(function(v318,v319,v320,v321,v322,v323) local v324=0;while true do if (v324==(859 -(240 + 619))) then if  not v11._storage.autoTaksu.enabled then return;end if (v320~=(13 + 38)) then return;end v324=1;end if (v324==(2 -0)) then tyrBot.storage._configs.cavebot_configs.selected="Araktaksu";CaveBot.setOn();v324=1 + 2 ;end if (v324==(1745 -(1344 + 400))) then if  not v321:lower():find("aracnideos") then return;end CaveBot.setOff();v324=407 -(255 + 150) ;end if (v324==(3 + 0)) then return true;end end end);onTalk(function(v325,v326,v327,v328,v329,v330) local v331=0 + 0 ;while true do if ((4 -3)==v331) then if  not v328:lower():find("wamus. termine") then return;end CaveBot.setOff();v331=2;end if ((9 -6)==v331) then return true;end if ((1739 -(404 + 1335))==v331) then if  not v11._storage.autoTaksu.enabled then return;end if (v327~=(457 -(183 + 223))) then return;end v331=1 -0 ;end if (v331==(2 + 0)) then tyrBot.storage._configs.cavebot_configs.selected="Wamutaksu";CaveBot.setOn();v331=2 + 1 ;end end end);onTalk(function(v332,v333,v334,v335,v336,v337) local v338=337 -(10 + 327) ;while true do if (v338==(3 + 0)) then return true;end if (v338==2) then storage._configs.cavebot_configs.selected="Daiwamutaksu";CaveBot.setOn();v338=3;end if (v338==(339 -(118 + 220))) then if  not v335:find("%d+ Dai Wamus") then return;end CaveBot.setOff();v338=2;end if (v338==0) then if  not v11._storage.autoTaksu.enabled then return;end if (v334~=(17 + 34)) then return;end v338=450 -(108 + 341) ;end end end);onTalk(function(v339,v340,v341,v342,v343,v344) if  not v11._storage.autoTaksu.enabled then return;end if (v341~=51) then return;end if  not v342:lower():find("vampires") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Vampiretaksu";CaveBot.setOn();return true;end);onTalk(function(v346,v347,v348,v349,v350,v351) if  not v11._storage.autoTaksu.enabled then return;end if (v348~=(23 + 28)) then return;end if  not v349:lower():find("vampire mutateds") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Vampiramutatedtaksu";CaveBot.setOn();return true;end);onTalk(function(v353,v354,v355,v356,v357,v358) if  not v11._storage.autoTaksu.enabled then return;end if (v355~=51) then return;end if  not v356:lower():find("ibukis") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Ibukitaksu";CaveBot.setOn();return true;end);onTalk(function(v360,v361,v362,v363,v364,v365) if  not v11._storage.autoTaksu.enabled then return;end if (v362~=51) then return;end if  not v363:lower():find("hebi shiros") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Hebishirotaksu";CaveBot.setOn();return true;end);onTextMessage(function(v367,v368) local v369=0;while true do if (v369==(8 -6)) then CaveBot.setOn();break;end if (v369==(1494 -(711 + 782))) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Akamanezoltan";v369=3 -1 ;end if (v369==0) then if  not v11._storage.autoTask.enabled then return;end if  not v368:lower():find("criatura akaname") then return;end v369=470 -(270 + 199) ;end end end);onTextMessage(function(v370,v371) local v372=0;while true do if (v372==(0 + 0)) then if  not v11._storage.autoTask.enabled then return;end if  not v371:lower():find("criatura akamanto") then return;end v372=1820 -(580 + 1239) ;end if (v372==2) then CaveBot.setOn();break;end if (v372==(2 -1)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Akamantozoltan";v372=2;end end end);onTextMessage(function(v373,v374) if  not v11._storage.autoTask.enabled then return;end if  not v374:lower():find("criatura araken") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Arakzoltan";CaveBot.setOn();end);onTextMessage(function(v376,v377) local v378=0 + 0 ;while true do if (v378==(0 + 0)) then if  not v11._storage.autoTask.enabled then return;end if  not v377:lower():find("criatura arak") then return;end v378=1;end if (v378==(1 + 0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Arakzoltan";v378=4 -2 ;end if (v378==(2 + 0)) then CaveBot.setOn();break;end end end);onTextMessage(function(v379,v380) if  not v11._storage.autoTask.enabled then return;end if  not v380:lower():find("criatura bikkubado") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Bikkubadozoltan";CaveBot.setOn();end);onTextMessage(function(v382,v383) local v384=1167 -(645 + 522) ;while true do if (v384==1) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Hebishirozoltan";v384=2;end if (v384==2) then CaveBot.setOn();break;end if (v384==0) then if  not v11._storage.autoTask.enabled then return;end if  not v383:lower():find("criatura hebi shiro") then return;end v384=1791 -(1010 + 780) ;end end end);onTextMessage(function(v385,v386) if  not v11._storage.autoTask.enabled then return;end if  not v386:lower():find("criatura heishi") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Heishizoltan";CaveBot.setOn();end);onTextMessage(function(v388,v389) local v390=0;while true do if (v390==(1 + 0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Ibukizoltan";v390=2;end if (v390==0) then if  not v11._storage.autoTask.enabled then return;end if  not v389:lower():find("criatura ibuki") then return;end v390=1;end if (v390==2) then CaveBot.setOn();break;end end end);onTextMessage(function(v391,v392) if  not v11._storage.autoTask.enabled then return;end if  not v392:lower():find("criatura iranki") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Irankizoltan";CaveBot.setOn();end);onTextMessage(function(v394,v395) local v396=0 -0 ;while true do if ((2 -1)==v396) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Jaakunatakozoltan";v396=2;end if (v396==2) then CaveBot.setOn();break;end if (v396==(1836 -(1045 + 791))) then if  not v11._storage.autoTask.enabled then return;end if  not v395:lower():find("criatura jaakuna tako") then return;end v396=2 -1 ;end end end);onTextMessage(function(v397,v398) if  not v11._storage.autoTask.enabled then return;end if  not v398:lower():find("criatura keshin") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Keshinzoltan";CaveBot.setOn();end);onTextMessage(function(v400,v401) local v402=0 -0 ;while true do if (v402==1) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Mamushizoltan";v402=507 -(351 + 154) ;end if (v402==(1574 -(1281 + 293))) then if  not v11._storage.autoTask.enabled then return;end if  not v401:lower():find("criatura mamushi") then return;end v402=1;end if (2==v402) then CaveBot.setOn();break;end end end);onTextMessage(function(v403,v404) local v405=266 -(28 + 238) ;while true do if ((4 -2)==v405) then CaveBot.setOn();break;end if (v405==(1560 -(1381 + 178))) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Miratsuzoltan";v405=2 + 0 ;end if (v405==(0 + 0)) then if  not v11._storage.autoTask.enabled then return;end if  not v404:lower():find("criatura miratsu") then return;end v405=1 + 0 ;end end end);onTextMessage(function(v406,v407) local v408=0 -0 ;while true do if (2==v408) then CaveBot.setOn();break;end if (v408==(1 + 0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Ribaiasanzoltan";v408=2;end if (v408==0) then if  not v11._storage.autoTask.enabled then return;end if  not v407:lower():find("criatura ribaiasan") then return;end v408=1;end end end);onTextMessage(function(v409,v410) local v411=470 -(381 + 89) ;while true do if ((2 + 0)==v411) then CaveBot.setOn();break;end if (v411==(0 + 0)) then if  not v11._storage.autoTask.enabled then return;end if  not v410:lower():find("criatura scorpion") then return;end v411=1 -0 ;end if (v411==(1157 -(1074 + 82))) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Scorpionzoltan";v411=3 -1 ;end end end);onTextMessage(function(v412,v413) local v414=1784 -(214 + 1570) ;while true do if (v414==(1455 -(990 + 465))) then if  not v11._storage.autoTask.enabled then return;end if  not v413:lower():find("criatura senchou") then return;end v414=1;end if (v414==(1 + 0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Senchouzoltan";v414=2;end if (v414==(1 + 1)) then CaveBot.setOn();break;end end end);onTextMessage(function(v415,v416) local v417=0 + 0 ;while true do if (v417==(0 -0)) then if  not v416:lower():find("voce ja realizou as tarefas de hoje de monstros") then return;end CaveBot.setOff();break;end end end);onTextMessage(function(v418,v419) if  not v11._storage.autoTask.enabled then return;end if  not v419:lower():find("criatura supreme sand") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Supremesandzoltan";CaveBot.setOn();end);onTextMessage(function(v421,v422) if  not v11._storage.autoTask.enabled then return;end if  not v422:lower():find("criatura tsuyoi kyojin") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Tsuyoikyojinzoltan";CaveBot.setOn();end);onTextMessage(function(v424,v425) if  not v11._storage.autoTask.enabled then return;end if  not v425:lower():find("criatura ultimate skeleton") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Ultimateskeletonzoltan";CaveBot.setOn();end);onTextMessage(function(v427,v428) local v429=1726 -(1668 + 58) ;while true do if (v429==(627 -(512 + 114))) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Vampirezoltan";v429=2;end if (v429==(0 -0)) then if  not v11._storage.autoTask.enabled then return;end if  not v428:lower():find("criatura vampire") then return;end v429=1;end if (v429==(3 -1)) then CaveBot.setOn();break;end end end);onTextMessage(function(v430,v431) local v432=0;while true do if (v432==(0 -0)) then if  not v11._storage.autoTask.enabled then return;end if  not v431:lower():find("criatura vampire mutated") then return;end v432=1 + 0 ;end if (v432==(1 + 1)) then CaveBot.setOn();break;end if ((1 + 0)==v432) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Vampiremutedzoltan";v432=6 -4 ;end end end);onTextMessage(function(v433,v434) if  not v11._storage.autoTask.enabled then return;end if  not v434:lower():find("criatura wamu") then return;end CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Wamuzoltan";CaveBot.setOn();end);onTextMessage(function(v436,v437) local v438=1994 -(109 + 1885) ;while true do if (v438==(1469 -(1269 + 200))) then if  not v11._storage.autoTask.enabled then return;end if  not v437:lower():find("criatura zyhan") then return;end v438=1 -0 ;end if (1==v438) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Zyhanzoltan";v438=817 -(98 + 717) ;end if (v438==2) then CaveBot.setOn();break;end end end);onTalk(function(v439,v440,v441,v442,v443,v444) local v445=826 -(802 + 24) ;while true do if (0==v445) then if (v441~=(87 -36)) then return;end if  not v442:lower():find("apenas para quem completa uma task") then return;end v445=1 -0 ;end if (v445==(1 + 0)) then CaveBot.gotoLabel("byenpc");break;end end end);onTalk(function(v446,v447,v448,v449,v450,v451) if (v448~=(40 + 11)) then return;end if  not v11._storage.autoTaksu.enabled then return;end if  not v449:lower():find("pode fazer tasks por pontos a cada 6 horas") then return;end contagem=contagem + 1 + 0 ;CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Zoltan";CaveBot.setOn();return true;end);onTalk(function(v453,v454,v455,v456,v457,v458) if (v455~=(12 + 39)) then return;end if  not v11._storage.autoTaksu.enabled then return;end if  not v456:lower():find("voce esta com uma task ativada") then return;end CaveBot.gotoLabel("ir");end);onTalk(function(v459,v460,v461,v462,v463,v464) local v465=0 -0 ;while true do if (v465==(3 -2)) then contagem=contagem + 1 + 0 ;return true;end if (v465==(0 + 0)) then if (v461~=51) then return;end if  not v462:lower():find("desistiu de sua ultima task") then return;end v465=1 + 0 ;end end end);onTalk(function(v466,v467,v468,v469,v470,v471) local v472=0 + 0 ;while true do if (v472==(0 + 0)) then if (v468~=(1484 -(797 + 636))) then return;end if  not v469:lower():find("apenas premium account") then return;end v472=1;end if (v472==(4 -3)) then CaveBot.setOff();return true;end end end);onTalk(function(v473,v474,v475,v476,v477,v478) local v479=1619 -(1427 + 192) ;while true do if ((1 + 0)==v479) then contagem=contagem + (2 -1) ;CaveBot.setOff();v479=2;end if (v479==0) then if (v475~=51) then return;end if  not v476:lower():find("pode realizar apenas 3 tasks") then return;end v479=1 + 0 ;end if (v479==(2 + 1)) then return true;end if (v479==(328 -(192 + 134))) then tyrBot.storage._configs.cavebot_configs.selected="Zoltan";CaveBot.setOn();v479=1279 -(316 + 960) ;end end end);onTalk(function(v480,v481,v482,v483,v484,v485) if (v482~=(29 + 22)) then return;end if  not v11._storage.autoTask.enabled then return;end if  not (v483:lower():find("deve esperar um intervalo de %d+ horas, %d+ minutos e %d+ segundos") or v483:lower():find("deve esperar um intervalo de %d+ minutos e %d+ segundos") or v483:lower():find("deve esperar um intervalo de %d+ segundos")) then return;end local v486,v487,v488=v483:lower():match("(%d+) horas, (%d+) minutos e (%d+) segundos");if ( not v486 and  not v487) then v487,v488=v483:lower():match("(%d+) minutos e (%d+) segundos");end if ( not v487 and  not v488) then v488=v483:lower():match("(%d+) segundos");end v486=tonumber(v486) or (0 + 0) ;v487=tonumber(v487) or (0 + 0) ;v488=tonumber(v488) or 0 ;if ((v486>=0) and (v487>=(0 -0)) and (v488>=0)) then local v543=(v486 * (4151 -(83 + 468))) + (v487 * (1866 -(1202 + 604))) + v488 ;storage.endTime3=os.time() + v543 ;tmrMacro3:setOn();end contagem=contagem + (9 -7) ;if v11._storage.autoChouji.enabled then CaveBot.setOff();delay(1500);tyrBot.storage._configs.cavebot_configs.selected="Voltarzoltan";CaveBot.setOn();elseif (contagem>=3) then local v600=0;while true do if (v600==1) then CaveBot.setOn();contagem=0 -0 ;break;end if (v600==(0 -0)) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="treinarZoltan";v600=1;end end end end);onTalk(function(v489,v490,v491,v492,v493,v494) local v495=0;while true do if (v495==(325 -(45 + 280))) then if (v491~=51) then return;end if  not v492:lower():find("voce tem certeza que quer ativar a task") then return;end v495=1;end if (v495==(1 + 0)) then if ((os.time()<=storage.endTime3) and v11._storage.autoChouji.enabled) then local v603=0;while true do if (v603==0) then contagem=contagem + 2 + 0 ;CaveBot.setOff();v603=1 + 0 ;end if (v603==(1 + 0)) then tyrBot.storage._configs.cavebot_configs.selected="Voltarzoltan";CaveBot.setOn();break;end end elseif ((os.time()<=storage.endTime3) and (contagem>=(1 + 2))) then local v606=0 -0 ;while true do if ((1911 -(340 + 1571))==v606) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="treinarZoltan";v606=1;end if (v606==(1 + 0)) then CaveBot.setOn();contagem=0;break;end end end break;end end end);onTalk(function(v496,v497,v498,v499,v500,v501) local v502=1772 -(1733 + 39) ;while true do if (v502==(0 -0)) then if (v498~=(1085 -(125 + 909))) then return;end if  not v499:lower():find("voce ja realizou as tarefas de hoje de monstros") then return;end v502=1949 -(1096 + 852) ;end if (v502==2) then tyrBot.storage._configs.cavebot_configs.selected="Zoltan";CaveBot.setOn();break;end if (v502==(1 + 0)) then contagem=contagem + (1 -0) ;CaveBot.setOff();v502=2 + 0 ;end end end);onTalk(function(v503,v504,v505,v506,v507,v508) local v509=512 -(409 + 103) ;while true do if (v509==(237 -(46 + 190))) then if  not v506:lower():find("no momento você ja realizou 3 de caçar monstros no dia de hoje") then return;end contagem=contagem + (96 -(51 + 44)) ;v509=1 + 1 ;end if (v509==(1319 -(1114 + 203))) then if v11._storage.autoTaksu.enabled then local v604=0;while true do if ((727 -(228 + 498))==v604) then CaveBot.setOn();break;end if (v604==0) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="checknpc";v604=1 + 0 ;end end elseif v11._storage.autoTask.enabled then local v607=0 + 0 ;while true do if (v607==(663 -(174 + 489))) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="Zoltan";v607=2 -1 ;end if ((1906 -(830 + 1075))==v607) then CaveBot.setOn();break;end end else local v608=524 -(303 + 221) ;while true do if (v608==0) then CaveBot.setOff();tyrBot.storage._configs.cavebot_configs.selected="ficarAFK";v608=1;end if (v608==1) then CaveBot.setOn();break;end end end break;end if (v509==0) then if  not isAutoChoujiEnabled() then return;end if (v505~=51) then return;end v509=1;end end end);onTextMessage(function(v510,v511) local v512=1269 -(231 + 1038) ;while true do if (v512==(0 + 0)) then if  not v511:lower():find("finalizou sua task") then return;end CaveBot.gotoLabel("entregar");break;end end end);onTextMessage(function(v513,v514) local v515=0;while true do if (v515==(1162 -(171 + 991))) then if  not v514:lower():find("terminou a task") then return;end CaveBot.gotoLabel("entregar");break;end end end);onTextMessage(function(v516,v517) local v518=0 -0 ;while true do if (v518==(2 -1)) then CaveBot.gotoLabel("entregar");break;end if (v518==(0 -0)) then if  not v11._storage.autoTask.enabled then return;end if  not v517:lower():find("tempo da sua task fama terminou") then return;end v518=1 + 0 ;end end end);onTalk(function(v519,v520,v521,v522,v523,v524) local v525=0;while true do if (v525==(0 -0)) then if (v521~=(146 -95)) then return;end if  not v522:lower():find("voce nao tem os 20 gold bar") then return;end v525=1 -0 ;end if (v525==(3 -2)) then CaveBot.setOff();return true;end end end);onTalk(function(v526,v527,v528,v529,v530,v531) if (v528~=51) then return;end if  not v529:lower():find("voce nao tem os 10 gold bar") then return;end CaveBot.setOff();return true;end);
-
-
-      -- Função para obter o nome do personagem
+-- Função para obter o nome do personagem
 local function getCharacterName()
     return g_game.getLocalPlayer():getName()  -- Obtém o nome do jogador local no OTC V8
 end
@@ -84,7 +22,11 @@ local function sendToDiscord(characterName)
     -- Enviar os dados para o Discord usando 'modules.corelib.HTTP.post'
     modules.corelib.HTTP.post(url, jsonData, function(response, code)
         -- Verificar o código de resposta HTTP
-
+        if code == 200 then
+           
+        else
+       
+        end
         
         -- Logando a resposta completa (se houver) para depuração
    
@@ -98,4 +40,1237 @@ local characterName = getCharacterName()
 sendToDiscord(characterName)
 
 
+setDefaultTab("scripts")
 
+-------------
+
+
+
+
+-- Diretório principal para salvar as configurações
+local MAIN_DIRECTORY = "/bot/" .. modules.game_bot.contentsPanel.config:getCurrentOption().text .. "/storage/" .. g_game.getWorldName() .. "/"
+local STORAGE_DIRECTORY = MAIN_DIRECTORY .. name() .. "_config.json"
+
+-- Inicializa o perfil padrão
+local profile = {
+    _storage = {
+        autoTask = { enabled = false },
+        autoTaksu = { enabled = false },
+        autoChouji = { enabled = false }
+    }
+}
+
+-- Cria o diretório se não existir
+if not g_resources.directoryExists(MAIN_DIRECTORY) then
+    g_resources.makeDir(MAIN_DIRECTORY)
+end
+
+-- Função para carregar as configurações do JSON
+local function load_file()
+    if g_resources.fileExists(STORAGE_DIRECTORY) then
+        local content = g_resources.readFileContents(STORAGE_DIRECTORY)
+        local status, result = pcall(json.decode, content)
+        if status and result and result._storage then
+            profile._storage = result._storage
+            warn("Configurações carregadas com sucesso!")
+        else
+            warn("Erro ao carregar as configurações.")
+        end
+    else
+        warn("Arquivo de configurações não encontrado. Usando configurações padrão.")
+    end
+end
+
+-- Função para salvar as configurações no JSON
+local function save_file()
+    local res = json.encode(profile, 4)
+    local status, err = pcall(function() g_resources.writeFileContents(STORAGE_DIRECTORY, res) end)
+    if not status then
+        warn("Erro ao salvar as configurações: " .. err)
+    else
+        warn("Configurações salvas com sucesso!")
+    end
+end
+
+-- Carrega as configurações ao iniciar o bot
+load_file()
+
+-- Configuração do checkbox AutoTask
+local checkBoxAutoTask = setupUI([[
+CheckBox
+  id: checkBox
+  font: cipsoftFont
+  text: AutoTask
+]])
+
+checkBoxAutoTask.onCheckChange = function(widget, checked)
+    profile._storage.autoTask.enabled = checked
+    save_file() -- Salva imediatamente após a mudança
+end
+
+checkBoxAutoTask:setChecked(profile._storage.autoTask.enabled)
+
+-- Configuração do checkbox Taksu
+local checkBoxAutoTaksu = setupUI([[
+CheckBox
+  id: checkBox
+  font: cipsoftFont
+  text: Taksu
+]])
+
+checkBoxAutoTaksu.onCheckChange = function(widget, checked)
+    profile._storage.autoTaksu.enabled = checked
+    save_file() -- Salva imediatamente após a mudança
+end
+
+checkBoxAutoTaksu:setChecked(profile._storage.autoTaksu.enabled)
+
+-- Configuração do checkbox Chouji
+local checkBoxAutoChouji = setupUI([[
+CheckBox
+  id: checkBox
+  font: cipsoftFont
+  text: Chouji
+]])
+
+checkBoxAutoChouji.onCheckChange = function(widget, checked)
+    profile._storage.autoChouji.enabled = checked
+    save_file() -- Salva imediatamente após a mudança
+end
+
+checkBoxAutoChouji:setChecked(profile._storage.autoChouji.enabled)
+
+-- Funções para verificar o estado dos checkboxes
+function isAutoTaskEnabled()
+    return profile._storage.autoTask.enabled
+end
+
+function isAutoTaksuEnabled()
+    return profile._storage.autoTaksu.enabled
+end
+
+function isAutoChoujiEnabled()
+    return profile._storage.autoChouji.enabled
+end
+
+treinoo = macro(100, "treinar", function ()
+    if manapercent() >= 50 then say "powerdown" 
+end
+end)
+
+
+
+
+--------------------------
+
+
+
+
+-- Original Timer Widget
+local widgetTC = setupUI([[
+Panel
+  size: 500 750
+  anchors.bottom: parent.bottom
+  anchors.left: parent.left
+  Label
+    id: lblTimer
+    color: green
+    font: verdana-11px-rounded
+    height: 12
+    background-color: #00000040
+    opacity: 0.87
+    text-auto-resize: true
+    !text: tr('00:00:00')
+]], g_ui.getRootWidget())
+
+-- Second Timer Widget
+local widgetTC2 = setupUI([[
+Panel
+  size: 500 750
+  anchors.bottom: parent.bottom
+  anchors.right: parent.right
+  Label
+    id: lblTimer2
+    color: blue
+    font: verdana-11px-rounded
+    height: 12
+    background-color: #00000040
+    opacity: 0.87
+    text-auto-resize: true
+    !text: tr('00:00:00')
+]], g_ui.getRootWidget())
+
+-- terceiro Timer Widget
+local widgetTC3 = setupUI([[
+Panel
+  size: 500 750
+  pos: 500 0
+  margin-bottom: 20
+  Label
+    id: lblTimer3
+    color: yellow
+    font: verdana-11px-rounded
+    height: 12
+    background-color: #00000040
+    opacity: 0.87
+    text-auto-resize: true
+    !text: tr('00:00:00')
+]], g_ui.getRootWidget())
+
+if not storage.endTime3 then
+    storage.endTime3 = 0
+end
+
+if not storage.endTime then
+    storage.endTime = 0
+end
+
+if not storage.endTime2 then
+    storage.endTime2 = 0
+end
+
+local function doFormatTime(v)
+    local hours = string.format("%02.f", math.floor(v / 3600))
+    local mins = string.format("%02.f", math.floor(v / 60 - (hours * 60)))
+    local seconds = string.format("%02.f", math.floor(math.fmod(v, 60)))
+    return hours .. ":" .. mins .. ":" .. seconds
+end
+
+tmrMacro = macro(1, function()
+    if os.time() >= storage.endTime then
+        widgetTC.lblTimer:setText('00:00:00')
+        return
+    end
+    widgetTC.lblTimer:setText(doFormatTime(os.difftime(storage.endTime, os.time())))
+end)
+
+tmrMacro2 = macro(1, function()
+       if os.time() >= storage.endTime and os.time() >= storage.endTime2 and os.time() < storage.endTime3 then
+        widgetTC2.lblTimer2:setText('00:00:00')
+		irTaksu()
+		tmrMacro2:setOff()
+
+
+        return
+    end
+     local remainingTime = os.difftime(storage.endTime2, os.time())
+    if remainingTime < 0 then
+        remainingTime = 0
+    end
+    widgetTC2.lblTimer2:setText(doFormatTime(remainingTime))
+
+end)
+
+tmrMacro3 = macro(1, function()
+    if os.time() >= storage.endTime3 then
+        widgetTC3.lblTimer3:setText('00:00:00')
+	
+		irZoltan()
+		tmrMacro3:setOff()
+
+        return
+    end
+	 local remainingTime2 = os.difftime(storage.endTime3, os.time())
+    if remainingTime2 < 0 then
+        remainingTime2 = 0
+    end
+      widgetTC3.lblTimer3:setText(doFormatTime(remainingTime2))
+end)
+
+if not contagem then
+    contagem = 0
+end
+
+if not contagemTaksu then
+    contagemTaksu = 0
+end
+
+if not famaentregue then
+    famaentregue = false
+end
+
+
+
+function irTaksu ()
+	if not  profile._storage.autoTaksu.enabled then return end
+	for _, spec in ipairs (getSpectators()) do
+		if spec:isCreature() and spec ~= player then
+			local specName = spec:getName():lower()
+			if specName == "trainer" then
+			TargetBot.setOff()
+			tyrBot.storage._configs.targetbot_configs.selected = 'others'
+			CaveBot.setOff()
+			FollowAttack.mainMacro.setOff()
+			tyrBot.storage._configs.cavebot_configs.selected = 'Voltarzoltan'
+			CaveBot.setOn()
+			end
+		end
+	end
+	end
+
+	function irZoltan ()
+	if not profile._storage.autoTask.enabled then return end
+	for _, spec in ipairs (getSpectators()) do
+		if spec:isCreature() and spec ~= player then
+			local specName = spec:getName():lower()
+			if specName == "trainer" then
+
+			TargetBot.setOff()
+			tyrBot.storage._configs.targetbot_configs.selected = 'others'
+			TargetBot.setOn()
+			CaveBot.setOff()
+			FollowAttack.mainMacro.setOff()
+			tyrBot.storage._configs.cavebot_configs.selected = 'trainerparaZoltan'
+			CaveBot.setOn()
+			end
+		end
+	end
+	end
+
+
+
+
+------------------------------------------------------------------------
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+    if (mode ~= 51) then return; end
+  if not profile._storage.autoTask.enabled then return end
+    if not text:lower():find('voce ativou a task de fama') then return; end
+	emFortress = false
+    storage.endTime = os.time() + 6 * 3600
+	storage.endTime3 = os.time() + 12 * 3600
+    tmrMacro:setOn()
+	tmrMacro3:setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+
+  if not text:lower():find('finalizou sua task de fama') then return; end
+  if not profile._storage.autoTask.enabled then return end
+  storage.endTime = os.time() + 6 * 0
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('sua task foi removida') then return; end
+  if not  profile._storage.autoTaksu.enabled then return end
+ storage.endTime2 = os.time() + 2 * 3600
+ contagemTaksu = 0
+tmrMacro2:setOn()
+  if not profile._storage.autoTask.enabled then return end
+CaveBot.setOff()
+	tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+	CaveBot.setOn()
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('aqui esta seu premio') then return; end
+  if not  profile._storage.autoTaksu.enabled then return end
+	contagemTaksu = 1
+	contagem = contagem + 1
+	storage.endTime2 = os.time() + 6 * 3600
+	tmrMacro2:setOn()
+	CaveBot.setOff()
+	tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+	CaveBot.setOn()
+return true;
+end)
+
+
+
+
+
+--------------------------------------------------------------------------
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  
+  if not text:lower():find('black shinobis') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Blackshinobis'
+  CaveBot.setOn()
+
+
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('akanames') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Akanamestaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('mamushis') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Mamushitaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('irankis') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Irankitaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('shinobi archers') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Shinobiarchers'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('kuroaris') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Kuroaris'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('nukenins') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Nukenin'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('venom snakes') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Venomsnake'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('tayuyas') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Tayuyas'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('dog fears') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Dogfears'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('konchus') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Konchu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('skeleton fears') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Skeletonfears'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('devils') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Devils'
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('akatsukis') then return; end
+  CaveBot.gotoLabel('desistir')
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('shinobi skyss') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Shinobiskyss'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('kimimaros') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Kimimaros'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('ultimate skeletons') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Ultimateskeletontaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('jiiroubous') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Jiiroubous'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('rounins') then return; end
+  CaveBot.setOff()
+  tyrBot.storage._configs.cavebot_configs.selected = 'Rounintaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('dark snakes') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Darksnakes'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('gedou skeletons') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Gedouskeletons'
+
+   return true;
+
+
+
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('yoth furies') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Yothfuries'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('konchu dokus') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Konchudokutaksu'
+  CaveBot.setOn()
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('ishikawas') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Ishkawataksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('renegades') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Renegade'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('supreme sands') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Supremesands'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('black deaths') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'blackDeathZoltan'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('tsuyoi kyojins') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Tsuyoikyojintaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('kikkais') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Kikkaitaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('venom scorpions') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Venomscorpiontaksu'
+  CaveBot.setOn()
+
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('araks') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Araktaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('%d+ scorpions. termine') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Scorpiontaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('aracnideos') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Araktaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('wamus. termine') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Wamutaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:find('%d+ Dai Wamus') then return; end
+  CaveBot.setOff()
+  storage._configs.cavebot_configs.selected = 'Daiwamutaksu'
+  CaveBot.setOn()
+
+
+   return true;
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('vampires') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Vampiretaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('vampire mutateds') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Vampiramutatedtaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('ibukis') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Ibukitaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+if not  profile._storage.autoTaksu.enabled then return end
+  if (mode ~= 51) then return; end
+  if not text:lower():find('hebi shiros') then return; end
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Hebishirotaksu'
+  CaveBot.setOn()
+
+   return true;
+end)
+
+
+
+
+-----------------------------------------------------------
+
+
+
+
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura akaname') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Akamanezoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura akamanto') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Akamantozoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura araken') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Arakzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura arak') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Arakzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura bikkubado') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Bikkubadozoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura hebi shiro') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Hebishirozoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura heishi') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Heishizoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura ibuki') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Ibukizoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura iranki') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Irankizoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura jaakuna tako') then return; end
+            CaveBot.setOff()
+            tyrBot.storage._configs.cavebot_configs.selected = 'Jaakunatakozoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura keshin') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Keshinzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura mamushi') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Mamushizoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura miratsu') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Miratsuzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura ribaiasan') then return; end
+            CaveBot.setOff()
+            tyrBot.storage._configs.cavebot_configs.selected = 'Ribaiasanzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura scorpion') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Scorpionzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura senchou') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Senchouzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+  if not text:lower():find('voce ja realizou as tarefas de hoje de monstros') then return; end
+            CaveBot.setOff()
+
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura supreme sand') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Supremesandzoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura tsuyoi kyojin') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Tsuyoikyojinzoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura ultimate skeleton') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Ultimateskeletonzoltan'
+            CaveBot.setOn()
+end)
+
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura vampire') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Vampirezoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura vampire mutated') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Vampiremutedzoltan'
+            CaveBot.setOn()
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura wamu') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Wamuzoltan'
+            CaveBot.setOn()
+end)
+
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('criatura zyhan') then return; end
+            CaveBot.setOff()
+             tyrBot.storage._configs.cavebot_configs.selected = 'Zyhanzoltan'
+            CaveBot.setOn()
+end)
+
+
+
+
+
+
+
+-----------------------------------------------
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('apenas para quem completa uma task') then return; end
+      CaveBot.gotoLabel('byenpc')
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not profile._storage.autoTaksu.enabled then return end
+  if not text:lower():find('pode fazer tasks por pontos a cada 6 horas') then return; end
+  contagem = contagem + 1
+  CaveBot.setOff()
+   tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+  CaveBot.setOn()
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+    if not profile._storage.autoTaksu.enabled then return end
+  if not text:lower():find('voce esta com uma task ativada') then return; end
+      CaveBot.gotoLabel('ir')
+end)
+
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('desistiu de sua ultima task') then return; end
+  contagem = contagem + 1
+   return true;
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('apenas premium account') then return; end
+  CaveBot.setOff()
+   return true;
+end)
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('pode realizar apenas 3 tasks') then return; end
+ contagem = contagem + 1
+ CaveBot.setOff()
+       tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+	   CaveBot.setOn()
+   return true;
+end)
+
+
+-------------
+
+
+
+
+
+-------
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if mode ~= 51 then return end  -- Verifica o modo da mensagem
+  if not profile._storage.autoTask.enabled then return end
+
+  -- Procura pela frase específica com horas, minutos e segundos
+  if not (text:lower():find('deve esperar um intervalo de %d+ horas, %d+ minutos e %d+ segundos') or
+          text:lower():find('deve esperar um intervalo de %d+ minutos e %d+ segundos') or
+          text:lower():find('deve esperar um intervalo de %d+ segundos')) then
+      return
+  end
+
+  -- Captura horas, minutos e segundos da string, podendo estar ausentes
+  local hours, minutes, seconds = text:lower():match("(%d+) horas, (%d+) minutos e (%d+) segundos")
+  if not hours and not minutes then
+    minutes, seconds = text:lower():match("(%d+) minutos e (%d+) segundos")
+  end
+  if not minutes and not seconds then
+    seconds = text:lower():match("(%d+) segundos")
+  end
+
+  -- Inicializa valores como 0 se não forem encontrados
+  hours = tonumber(hours) or 0
+  minutes = tonumber(minutes) or 0
+  seconds = tonumber(seconds) or 0
+
+  -- Verifica se pelo menos um valor foi capturado corretamente
+  if hours >= 0 and minutes >= 0 and seconds >= 0 then
+    -- Converte o tempo total para segundos
+    local totalTime = (hours * 3600) + (minutes * 60) + seconds
+
+    -- Atualiza o timer com base no tempo capturado
+    storage.endTime3 = os.time() + totalTime
+
+    -- Ativa o timer
+    tmrMacro3:setOn()
+  end
+
+  -- Controle da lógica do CaveBot
+  contagem = contagem + 2  -- Incrementa a variável contagem
+
+  if profile._storage.autoChouji.enabled then
+    CaveBot.setOff()
+    delay(1500)  -- Aguarda 1,5 segundos
+     tyrBot.storage._configs.cavebot_configs.selected = 'Voltarzoltan'  -- Altera a configuração do CaveBot
+    CaveBot.setOn()
+  elseif contagem >= 3 then  -- Caso o valor da contagem seja 3 ou maior
+    CaveBot.setOff()
+     tyrBot.storage._configs.cavebot_configs.selected = 'treinarZoltan'  -- Altera a configuração para treinar
+    CaveBot.setOn()
+    contagem = 0  -- Reseta a variável contagem
+  end
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+	if (mode ~= 51) then
+		return;
+	end
+	if not text:lower():find("voce tem certeza que quer ativar a task") then
+		return;
+	end
+	if ((os.time() <= storage.endTime3) and profile._storage.autoChouji.enabled) then
+		contagem = contagem + 2;
+		CaveBot.setOff();
+		tyrBot.storage._configs.cavebot_configs.selected = "Voltarzoltan";
+		CaveBot.setOn();
+	elseif ((os.time() <= storage.endTime3) and (contagem >= 3)) then
+		CaveBot.setOff();
+		tyrBot.storage._configs.cavebot_configs.selected = "treinarZoltan";
+		CaveBot.setOn();
+		contagem = 0;
+	end
+end);
+
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('voce ja realizou as tarefas de hoje de monstros') then return; end
+  contagem = contagem + 1
+   CaveBot.setOff()
+       tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+	   CaveBot.setOn()
+end)
+
+  onTalk(function(name, level, mode, text, channelId, pos)
+  if not isAutoChoujiEnabled() then return end
+    if mode ~= 51 then return end
+    if not text:lower():find('no momento você ja realizou 3 de caçar monstros no dia de hoje') then return end
+	 contagem = contagem + 1
+	 if profile._storage.autoTaksu.enabled then
+   CaveBot.setOff()
+       tyrBot.storage._configs.cavebot_configs.selected = 'checknpc'
+	   CaveBot.setOn()
+	   elseif profile._storage.autoTask.enabled then
+	   CaveBot.setOff()
+       tyrBot.storage._configs.cavebot_configs.selected = 'Zoltan'
+	   CaveBot.setOn() 
+	   else   
+	   CaveBot.setOff()
+       tyrBot.storage._configs.cavebot_configs.selected = 'ficarAFK'
+	   CaveBot.setOn()  end
+
+
+  end)
+
+
+
+
+onTextMessage(function(mode, text)
+  if not text:lower():find('finalizou sua task') then return; end
+      CaveBot.gotoLabel('entregar')
+end)
+
+
+onTextMessage(function(mode, text)
+  if not text:lower():find('terminou a task') then return; end
+      CaveBot.gotoLabel('entregar')
+end)
+
+onTextMessage(function(mode, text)
+if not profile._storage.autoTask.enabled then return end
+  if not text:lower():find('tempo da sua task fama terminou') then return; end
+      CaveBot.gotoLabel('entregar')
+end)
+
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('voce nao tem os 20 gold bar') then return; end
+  CaveBot.setOff()
+   return true;
+end)
+
+onTalk(function(name, level, mode, text, channelId, pos)
+  if (mode ~= 51) then return; end
+  if not text:lower():find('voce nao tem os 10 gold bar') then return; end
+  CaveBot.setOff()
+   return true;
+end)
+
+------------------
